@@ -208,18 +208,18 @@ if ( isset( $_REQUEST['submit'] ) ) {
          $phpData = json_decode($existingData);
 
         $formData = array(
-            "First Name: "       => $_REQUEST['fname'],
-            "Last Name: "        => $_REQUEST['lname'],
-            "User Name: "        => $_REQUEST['userName'],
-            "Date of Birth: "    => $_REQUEST['dateOfBirth'],
-            "Phone Number: "     => $_REQUEST['phoneNumber'],
-            "Email Address: "    => $_REQUEST['email'],
-            "Gender: "           => $_REQUEST['gender'],
-            "City: "             => $_REQUEST['city'],
-            "Zip Code: "         => $_REQUEST['zipCode'],
-            "Address: "          => $_REQUEST['address'],
-            "Passthrough: "      => $_REQUEST['password'],
-            "COnfirm Password: " => $_REQUEST['confirmPassword'],
+            "fname: "       => $_REQUEST['fname'],
+            "lname: "        => $_REQUEST['lname'],
+            "userName: "        => $_REQUEST['userName'],
+            "dateOfBirth: "    => $_REQUEST['dateOfBirth'],
+            "phoneNumber: "     => $_REQUEST['phoneNumber'],
+            "email: "    => $_REQUEST['email'],
+            "gender: "           => $_REQUEST['gender'],
+            "city: "             => $_REQUEST['city'],
+            "zipCode: "         => $_REQUEST['zipCode'],
+            "address: "          => $_REQUEST['address'],
+            "password: "      => $_REQUEST['password'],
+            "confirmPassword: " => $_REQUEST['confirmPassword'],
             "File: "             => "../uploads/" . $_REQUEST['email'] . ".jpg",
 
         );
