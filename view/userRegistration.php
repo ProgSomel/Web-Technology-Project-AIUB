@@ -1,12 +1,19 @@
+<?php
+include '../../control/process.php';
+?>
+
 <html>
     <head></head>
     <body>
-
-<div align = "center" >
+      <header >
+      <div align = "center" >
 <h1>User Registration</h1>
 </div>
-<div align="center">
-    <form action="../../control/process.php" method="post">
+      </header>
+
+      <main>
+      <div align="center">
+    <form action="" method="post" enctype="multipart/form-data">
         <table>
             <tr></tr>
             <tr></tr>
@@ -16,9 +23,10 @@
             <tr></tr>
             <tr></tr>
           <tr>
+            <!------------ First Name ------- -->
             <th>First Name:</th>
             <td>
-                <input type="text" name="fname" id="" placeholder="Enter your First Name"  >
+                <input type="text" name="fname" id="" placeholder="Enter your First Name"  ><?php echo $fnameMessage ?><br>
             </td>
 
           </tr>
@@ -34,7 +42,7 @@
 
 
             <td>
-                <input type="text" name="lname" id="" placeholder="Enter your Last Name" >
+                <input type="text" name="lname" id="" placeholder="Enter your Last Name" ><?php echo $lnameMessage ?><br>
             </td>
           </tr>
           <tr></tr>
@@ -48,7 +56,7 @@
           <th>User Name: </th>
 
             <td>
-                <input type="text" name="userName" id="" placeholder="Enter your User Name">
+                <input type="text" name="userName" id="" placeholder="Enter your User Name"><?php echo $userNameMessage ?><br>
             </td>
           </tr>
           <tr></tr>
@@ -59,11 +67,12 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!------- Date of Birth ------ -->
             <th>Date of Birth: </th>
 
 
             <td>
-                <input type="date" name="dateOfBirth" id="">
+                <input type="date" name="dateOfBirth" id=""><?php echo $dateOfBirthMessage ?><br>
             </td>
           </tr>
           <tr></tr>
@@ -74,12 +83,13 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!--------- Phone Number ------- -->
             <th>Phone Number: </th>
 
 
             <td>
                 <input type="text" name="phoneNumberCountryCode" id="" value="+88" size="1">
-                <input type="text" name="phoneNumber" id="" placeholder="Enter your Number" >
+                <input type="text" name="phoneNumber" id="" placeholder="Enter your Number" ><?php echo $phoneNumberMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -90,11 +100,13 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!-------Email ------ -->
             <th>Email: </th>
 
 
             <td>
                 <input type="email" name="email" id="" placeholder="abc@example.com">
+                <?php echo $emailMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -105,6 +117,7 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!------- Gender --------- -->
             <th>Gender: </th>
 
 
@@ -112,7 +125,7 @@
             <td>
             <input type="radio" name="gender" id="" value = "Male">Male
             <input type="radio" name="gender" id="" value = "Female">Female
-            <input type="radio" name="gender" id="" value = "NotInterested">Not Interested
+            <input type="radio" name="gender" id="" value = "NotInterested">Not Interested. <?php echo $genderMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -123,6 +136,7 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!------- City ------ -->
             <th>City: </th>
 
 
@@ -137,7 +151,7 @@
     <option value="Comilla">Comilla</option>
     <option value="Sylhet">Sylhet</option>
     <option value="Rangpur">Rangpur</option>
-</select>
+</select> <?php echo $cityMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -148,12 +162,13 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!------- Zip Code --------- -->
             <th>Zip Code: </th>
 
 
 
             <td>
-<input type="text" name="zipCode" id="" placeholder="Enter Zip Code">
+<input type="text" name="zipCode" id="" placeholder="Enter Zip Code"> <?php echo $zipCodeMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -164,11 +179,12 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!---------- Address -------- -->
             <th>Address: </th>
 
 
             <td>
-                <textarea name="address" id="" cols="25" rows="5"></textarea>
+                <textarea name="address" id="" cols="25" rows="5"></textarea> <?php echo $addressMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -179,11 +195,12 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!------ Password------->
             <th>Password: </th>
 
 
             <td>
-                <input type="password" name="password" id="" placeholder="Enter Password">
+                <input type="password" name="password" id="" placeholder="Enter Password"><?php echo $passwordMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -194,11 +211,12 @@
           <tr></tr>
           <tr></tr>
           <tr>
+            <!------ Confirm Password ------ -->
             <th>Confirm Password: </th>
 
 
             <td>
-                <input type="password" name="confirmPassword" id="" placeholder="Confirm your Password">
+                <input type="password" name="confirmPassword" id="" placeholder="Confirm your Password"><?php echo $confirmPasswordMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -211,16 +229,20 @@
           <tr></tr>
           <tr></tr>
           <tr></tr>
+          <tr?>
+
+           <th>Set Profile Picture: </th>
+
+     <td>
+  <input type="file" name="profileImage" id=""><?php echo $profileImageMessage ?>
+     </td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
           <tr>
-           <td></td>
-
-
-
+          <td></td>
             <td>
-
-
-
-
                 <input type="checkbox" name="iAcceptCheckbox" id="" required> I Accept
             </td>
           </tr>
@@ -239,13 +261,14 @@
           <tr></tr>
           <tr></tr>
           <tr>
+<td></td>
+            <td>
 
-            <td>
-              <input type="submit" value="Submit">
-            </td>
-            <td>
               <input type="reset" value="Reset">
+              <input type="submit" name="submit" value="Submit"/>
+
             </td>
+
             <td></td>
           </tr>
 
@@ -269,12 +292,15 @@
             <td>Already have an Account? <a href="">login</a> </td>
             <td></td>
             <td></td>
-
-
+            <td></td>
           </tr>
         </table>
 
     </form>
 </div>
+      </main>
+
+
+
     </body>
 </html>
