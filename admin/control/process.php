@@ -27,7 +27,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
     $address = $_REQUEST['address'];
     $password = $_REQUEST['password'];
     $confirmPassword = $_REQUEST['confirmPassword'];
-    $hasError = 0; //For checking isThereAny ValidationError
+    $hasError = 0; //?For checking isThereAny ValidationError
 
     //? --------First Name-----------
     if ( empty( $fname ) ) {
@@ -198,43 +198,43 @@ if ( isset( $_REQUEST['submit'] ) ) {
 
     } else {
         $profileImageMessage = $_FILES['profileImage']['name'];
-        move_uploaded_file( $_FILES["profileImage"]["tmp_name"], "../uploads" . $_REQUEST['email'] . ".jpg" );
+        move_uploaded_file( $_FILES["profileImage"]["tmp_name"], "../uploads/" . $_REQUEST['email'] . ".jpg" );
     }
     //?----- Data Write in File Using JSON------
     if ( $hasError == 0 ) {
         //? ----To get Previous Data-------
-        $existingData = file_get_contents("../data/jsondata.json");
-         //? Converting existing data to PHP Data
-         $phpData = json_decode($existingData);
+        $existingData = file_get_contents( "../data/jsondata.json" );
+        //? Converting existing data to PHP Data
+        $phpData = json_decode( $existingData );
 
         $formData = array(
-            "fname: "       => $_REQUEST['fname'],
-            "lname: "        => $_REQUEST['lname'],
-            "userName: "        => $_REQUEST['userName'],
-            "dateOfBirth: "    => $_REQUEST['dateOfBirth'],
-            "phoneNumber: "     => $_REQUEST['phoneNumber'],
-            "email: "    => $_REQUEST['email'],
-            "gender: "           => $_REQUEST['gender'],
-            "city: "             => $_REQUEST['city'],
-            "zipCode: "         => $_REQUEST['zipCode'],
-            "address: "          => $_REQUEST['address'],
-            "password: "      => $_REQUEST['password'],
-            "confirmPassword: " => $_REQUEST['confirmPassword'],
-            "File: "             => "../uploads/" . $_REQUEST['email'] . ".jpg",
+            "fname"=> $_REQUEST['fname'],
+            "lname"           => $_REQUEST['lname'],
+            "userName"        => $_REQUEST['userName'],
+            "dateOfBirth"     => $_REQUEST['dateOfBirth'],
+            "phoneNumber"     => $_REQUEST['phoneNumber'],
+            "email"           => $_REQUEST['email'],
+            "gender"          => $_REQUEST['gender'],
+            "city"            => $_REQUEST['city'],
+            "zipCode"         => $_REQUEST['zipCode'],
+            "address"         => $_REQUEST['address'],
+            "password"        => $_REQUEST['password'],
+            "confirmPassword" => $_REQUEST['confirmPassword'],
+            "File"            => "../uploads/" . $_REQUEST['email'] . ".jpg",
 
         );
         //? For adding existing data with new Data
-        $phpData [] = $formData;
+        $phpData[] = $formData;
 
-       
         //? ---Converting PHP Data to JSON Data------
-        $jsonFormData = json_encode(  $phpData, JSON_PRETTY_PRINT); //?It will Return JSON object
+        $jsonFormData = json_encode( $phpData, JSON_PRETTY_PRINT ); //?It will Return JSON object
 
         //Wrting File
-        if(file_put_contents( "../data/jsondata.json", $jsonFormData )) {
-            echo "FIle Written Successfully";
-        }
-        else {
+        if ( file_put_contents( "../data/jsondata.json", $jsonFormData ) ) {
+            echo "File Written Successfully.";
+            echo " Please login Now";
+
+        } else {
             echo "File Written Failed !";
         }
 

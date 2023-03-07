@@ -1,5 +1,5 @@
 <?php
-include '../../control/process.php';
+include '../control/process.php';
 ?>
 
 <html>
@@ -289,7 +289,7 @@ include '../../control/process.php';
           <tr></tr>
           <tr>
           <td></td>
-            <td>Already have an Account? <a href="">login</a> </td>
+            <td>Already have an Account? <a href="../../admin/view/login.php">login</a> </td>
             <td></td>
             <td></td>
             <td></td>
