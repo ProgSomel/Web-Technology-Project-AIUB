@@ -5,6 +5,14 @@ include '../control/process.php';
 <html>
     <head></head>
     <body>
+    <?php
+      include "../../layouts/header.php" ;
+    ?> 
+    <br>
+    <a href="../../home.php">Home</a>
+    <br>
+    <hr>
+    <br>
       <header >
       <div align = "center" >
 <h1>User Registration</h1>
@@ -301,6 +309,8 @@ include '../control/process.php';
       </main>
 
 
-
+      <?php
+      include "../../layouts/footer.php" ;
+    ?> 
     </body>
 </html>

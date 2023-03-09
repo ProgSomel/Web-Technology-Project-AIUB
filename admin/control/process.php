@@ -208,7 +208,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
         $phpData = json_decode( $existingData );
 
         $formData = array(
-            "fname"=> $_REQUEST['fname'],
+            "fname"           => $_REQUEST['fname'],
             "lname"           => $_REQUEST['lname'],
             "userName"        => $_REQUEST['userName'],
             "dateOfBirth"     => $_REQUEST['dateOfBirth'],

@@ -7,6 +7,14 @@ include '../control/login_control.php'
     <title>Document</title>
 </head>
 <body >
+<?php
+        include '../../layouts/header.php' ;
+      ?>
+      <br>
+      <a href="../../home.php">Home</a>
+      <br>
+      <hr>
+      <br>
     <table>
     <tr></tr>
     <tr></tr>
@@ -55,7 +63,8 @@ include '../control/login_control.php'
             </tr>
             <tr>
             <td>
-                    <input type="email" name="email" id="" size="50">
+                    <input type="email" name="email" id="" size="50"> <br>
+                   
                 </td>
             </tr>
             <tr>
@@ -66,6 +75,7 @@ include '../control/login_control.php'
             <td>
                     <input type="password" name="password" id="" size="50">
                 </td>
+               
             </tr>
             <tr></tr>
             <tr></tr>
@@ -77,6 +87,13 @@ include '../control/login_control.php'
                     <input type="submit" name="login-btn" value="login" >
                 </td>
 
+            </tr>
+            <tr>
+                <td>
+                <?php 
+                      echo $errorMessage;
+                    ?>
+                </td>
             </tr>
             <tr></tr>
             <tr></tr>
@@ -91,6 +108,8 @@ include '../control/login_control.php'
         </table>
     </form>
     </div>
-
+    <?php
+        include '../../layouts/footer.php' ;
+      ?>
 </body>
 </html>

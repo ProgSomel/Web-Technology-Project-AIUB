@@ -1,11 +1,15 @@
 <?php
+session_start();
+$passwordMessage = "";
+$errorMessage = "";
 if ( isset( $_REQUEST['login-btn'] ) ) {
+    $emailMessage = "";
     $matched = 0;
     if ( empty( $_REQUEST['email'] ) ) {
-        echo "Please enter your email address!";
+        $emailMessage = "Please enter your Email address!";
 
     } elseif ( empty( $_REQUEST['password'] ) ) {
-        echo "Please enter your password!";
+        $passwordMessage = "Please enter your Password!";
     } else {
         //? Getting File Data From JSON File
         $fileData = file_get_contents( "../data/jsondata.json" );
@@ -14,14 +18,13 @@ if ( isset( $_REQUEST['login-btn'] ) ) {
         $phpObject = json_decode( $fileData );
         foreach ( $phpObject as $myObj ) {
             if ( $myObj->email == $_REQUEST["email"] && $myObj->password == $_REQUEST["password"] ) {
-
+                $_SESSION["email"] = $myObj->email;
+                header( "Location: ../view/profile.php" );
                 $matched = 1;
             }
         }
-        if ( $matched == 1 ) {
-            header( "Location: ../view/profile.php" );
-        } else {
-            echo "logging failed";
+        if ( $matched == 0 ) {
+            $errorMessage = "logging failed! Please give Correct credentials";
         }
     }
 }
