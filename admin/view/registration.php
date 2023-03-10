@@ -5,21 +5,151 @@ include '../control/process.php';
 <html>
     <head></head>
     <body>
-    <?php
-      include "../../layouts/header.php" ;
-    ?> 
-    <br>
-    <a href="../../home.php">Home</a>
-    <br>
-    <hr>
-    <br>
-      <header >
+    <header>
+<table align="right">
+<tr>
+<td><?php
+include '../../layouts/header.php';
+?></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+
+
+<td >
+<a href="../../home.php">HOME</a>
+<a href="login.php">ADMIN</a>
+<a href="./View/Employee_login.php">EMPLOYEE</a>
+<a href="./View/Login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
+</td>
+<form method="post">
+<td><input type="text" name="search"size="30"><button type="button" name="btn">search</button></td>
+<td></td>
+</form>
+</tr>
+</table>
+</header>
+<hr>
+      
+      
+     
+
+      <main>
       <div align = "center" >
 <h1>User Registration</h1>
 </div>
-      </header>
-
-      <main>
       <div align="center">
     <form action="" method="post" enctype="multipart/form-data">
         <table>
@@ -292,9 +422,7 @@ include '../control/process.php';
           <tr></tr>
           <tr></tr>
           <tr></tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
+
           <tr>
           <td></td>
             <td>Already have an Account? <a href="../../admin/view/login.php">login</a> </td>
@@ -307,10 +435,12 @@ include '../control/process.php';
     </form>
 </div>
       </main>
+<footer>
+<?php
+include "../../layouts/footer.php";
+?>
+</footer>
 
 
-      <?php
-      include "../../layouts/footer.php" ;
-    ?> 
     </body>
 </html>

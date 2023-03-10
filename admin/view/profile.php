@@ -2,15 +2,15 @@
 include "../control/profile_process.php";
 ?>
 <html>
-<head>   
-<title>  
-Profile Page  
-</title>  
-</head>  
+<head>
+<title>
+Profile Page
+</title>
+</head>
 <body>
     <?php
-      include "../../layouts/header.php" ;
-    ?>  
+include '../../layouts/header.php';
+?>
     <br>
     <a href="../../home.php">Home</a>
     <br>
@@ -23,8 +23,8 @@ echo $_SESSION["email"]; ?>
 
 <br>
 <br>
-<hr>
-
+<!-- Personal Information  -->
+<div>
 <br>First Name: <?php echo $fname; ?>
 <br>Last Name: <?php echo $lname; ?>
 <br>User Name: <?php echo $userName; ?>
@@ -38,9 +38,12 @@ echo $_SESSION["email"]; ?>
 
 <br>
 <br>
+</div>
+
+
 <a href="../control/logout_contol.php">log out </a>
 <?php
-      include "../../layouts/footer.php" ;
-    ?> 
+include "../../layouts/footer.php";
+?>
 <body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$fname=$lname=$email="";
+$fname=$lname=$email=$userName=$phoneNumber= $gender= $city= $address="";
 if(empty($_SESSION["email"]))
 {
     header("Location: ../view/login.php");
