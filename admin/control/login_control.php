@@ -19,7 +19,7 @@ if ( isset( $_REQUEST['login-btn'] ) ) {
         foreach ( $phpObject as $myObj ) {
             if ( $myObj->email == $_REQUEST["email"] && $myObj->password == $_REQUEST["password"] ) {
                 $_SESSION["email"] = $myObj->email;
-                header( "Location: ../view/profile.php" );
+                header( "Location: ../view/AdminProfile.php" );
                 $matched = 1;
             }
         }

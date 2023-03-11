@@ -1,6 +1,6 @@
 <?php
 session_start();
-$fname=$lname=$email=$userName=$phoneNumber= $gender= $city= $address="";
+$fname=$lname=$email=$userName=$phoneNumber= $gender= $city= $address=$adminProfilePic="";
 if(empty($_SESSION["email"]))
 {
     header("Location: ../view/login.php");
@@ -20,6 +20,7 @@ foreach($phpdata as $myobj)
         $gender= $myobj->gender."<br>";
         $city= $myobj->city."<br>";
         $address= $myobj->address."<br>";
+        $adminProfilePic= $myobj->File."<br>";
         
     }
 }
