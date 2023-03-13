@@ -187,28 +187,28 @@ include 'layouts/header.php';
         <td></td>
         <td>
           <img src="assets/bike1.jfif" alt="" width="200px" height="200px">
-          <h1>Title</h1>
+          <h1>Bike</h1>
           <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aliquam, eum? Consequuntur at <br> sed mollitia dolore, eligendi nam. <br> Soluta facere reiciendis ad et quasi,<br> sit labore architecto cumque possimus <br> illo maxime!</p>
           <button>Add to Cart</button>
           <button>View More</button>
         </td>
         <td>
            <img src="assets/shirt1.jfif" alt="" width="200px" height="200px">
-           <h1>Title</h1>
+           <h1>Shirt</h1>
           <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aliquam, eum? Consequuntur at <br> sed mollitia dolore, eligendi nam. <br> Soluta facere reiciendis ad et quasi,<br> sit labore architecto cumque possimus <br> illo maxime!</p>
           <button>Add to Cart</button>
           <button>View More</button>
         </td>
         <td>
            <img src="assets/sunglass1.jfif" alt="" width="200px" height="200px">
-           <h1>Title</h1>
+           <h1>Sunglass</h1>
           <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aliquam, eum? Consequuntur at <br> sed mollitia dolore, eligendi nam. <br> Soluta facere reiciendis ad et quasi,<br> sit labore architecto cumque possimus <br> illo maxime!</p>
           <button>Add to Cart</button>
           <button>View More</button>
         </td>
         <td>
-           <img src="assets/sunglass1.jfif" alt="" width="200px" height="200px">
-           <h1>Title</h1>
+           <img src="assets/phone1.jfif" alt="" width="200px" height="200px">
+           <h1>Phone</h1>
           <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aliquam, eum? Consequuntur at <br> sed mollitia dolore, eligendi nam. <br> Soluta facere reiciendis ad et quasi,<br> sit labore architecto cumque possimus <br> illo maxime!</p>
           <button>Add to Cart</button>
           <button>View More</button>
@@ -271,28 +271,28 @@ include 'layouts/header.php';
         <td></td>
         <td>
           <img src="assets/shoe1.jfif" alt="" width="200px" height="200px">
-          <h1>Title</h1>
+          <h1>Shoe</h1>
           <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aliquam, eum? Consequuntur at <br> sed mollitia dolore, eligendi nam. <br> Soluta facere reiciendis ad et quasi,<br> sit labore architecto cumque possimus <br> illo maxime!</p>
           <button>Add to Cart</button>
           <button>View More</button>
         </td>
         <td>
            <img src="assets/apple.jfif" alt="" width="200px" height="200px">
-           <h1>Title</h1>
+           <h1>Apple</h1>
           <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aliquam, eum? Consequuntur at <br> sed mollitia dolore, eligendi nam. <br> Soluta facere reiciendis ad et quasi,<br> sit labore architecto cumque possimus <br> illo maxime!</p>
           <button>Add to Cart</button>
           <button>View More</button>
         </td>
         <td>
            <img src="assets/watch1.jfif" alt="" width="200px" height="200px">
-           <h1>Title</h1>
+           <h1>Watch</h1>
           <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aliquam, eum? Consequuntur at <br> sed mollitia dolore, eligendi nam. <br> Soluta facere reiciendis ad et quasi,<br> sit labore architecto cumque possimus <br> illo maxime!</p>
           <button>Add to Cart</button>
           <button>View More</button>
         </td>
         <td>
-           <img src="assets/watch1.jfif" alt="" width="200px" height="200px">
-           <h1>Title</h1>
+           <img src="assets/speaker1.jfif" alt="" width="200px" height="200px">
+           <h1>Speaker</h1>
           <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aliquam, eum? Consequuntur at <br> sed mollitia dolore, eligendi nam. <br> Soluta facere reiciendis ad et quasi,<br> sit labore architecto cumque possimus <br> illo maxime!</p>
           <button>Add to Cart</button>
           <button>View More</button>

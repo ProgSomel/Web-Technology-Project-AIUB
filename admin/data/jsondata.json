@@ -13,5 +13,20 @@
         "password": "S@mel682823799o",
         "confirmPassword": "S@mel682823799o",
         "File": "..\/uploads\/somelahmed88@gmail.com.jpg"
+    },
+    {
+        "fname": "Aminul",
+        "lname": "Islam",
+        "userName": "AminulIslam",
+        "dateOfBirth": "2000-08-12",
+        "phoneNumber": "01768282379",
+        "email": "aminulislam88@gmail.com",
+        "gender": "Male",
+        "city": "Rajshahi",
+        "zipCode": "2230",
+        "address": "House: 8\/A, Road:31",
+        "password": "Aminul@682823799o",
+        "confirmPassword": "Aminul@682823799o",
+        "File": "..\/uploads\/aminulislam88@gmail.com.jpg"
     }
 ]
