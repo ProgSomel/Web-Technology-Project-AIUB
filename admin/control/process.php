@@ -206,7 +206,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
         $existingData = file_get_contents( "../data/jsondata.json" );
         //? Converting existing data to PHP Data
         $phpData = json_decode( $existingData );
-
+        //? Converting Object Data to Array Data
         $formData = array(
             "fname"           => $_REQUEST['fname'],
             "lname"           => $_REQUEST['lname'],
