@@ -182,27 +182,3 @@ Limitations and Possible Future Improvements:
 • There are some problems with Employee Features. Which will be resolved in Future
 
 • UI will be improved to meet user satisfaction
-
-
-
-
-
-
-[Note: Make sure that your report is maximum 10 pages (including cover page). Print (Colored) the report and submit it with spiral bind.]
-
-
-
-CO1.1 and CO2.1 Evaluation: Project Report Evaluation
-Project Proposal 
-(5)	Background 
-Study 
-(5)	Requirement Analysis 
-(5)	Entity 
-Diagram
- (5)	System Images
-against the
-Specification (5)	Total
-(25)
-					
-
-
