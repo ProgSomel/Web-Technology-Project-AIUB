@@ -200,13 +200,13 @@ if ( isset( $_REQUEST['submit'] ) ) {
         $profileImageMessage = $_FILES['profileImage']['name'];
         move_uploaded_file( $_FILES["profileImage"]["tmp_name"], "../uploads/" . $_REQUEST['email'] . ".jpg" );
     }
-    //?----- Data Write in File Using JSON------
+    //!----- Data Write in File Using JSON------
     if ( $hasError == 0 ) {
         //? ----To get Previous Data-------
         $existingData = file_get_contents( "../data/jsondata.json" );
         //? Converting existing data to PHP Data
         $phpData = json_decode( $existingData );
-        //? Converting Object Data to Array Data
+        //? Getting Form Data as Array
         $formData = array(
             "fname"           => $_REQUEST['fname'],
             "lname"           => $_REQUEST['lname'],
@@ -224,6 +224,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
 
         );
         //? For adding existing data with new Data
+        //? For Array Concat We do Like This
         $phpData[] = $formData;
 
         //? ---Converting PHP Data to JSON Data------

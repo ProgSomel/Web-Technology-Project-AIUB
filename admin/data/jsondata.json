@@ -28,5 +28,20 @@
         "password": "Aminul@682823799o",
         "confirmPassword": "Aminul@682823799o",
         "File": "..\/uploads\/aminulislam88@gmail.com.jpg"
+    },
+    {
+        "fname": "Ajoy",
+        "lname": "Roy",
+        "userName": "AjoyRoy",
+        "dateOfBirth": "2000-04-08",
+        "phoneNumber": "01735818460",
+        "email": "aj.anik1305@gmail.com",
+        "gender": "Male",
+        "city": "Dhaka",
+        "zipCode": "2240",
+        "address": "House: 8\/A, Road:31",
+        "password": "AJ_anik@12",
+        "confirmPassword": "AJ_anik@12",
+        "File": "..\/uploads\/aj.anik1305@gmail.com.jpg"
     }
 ]
