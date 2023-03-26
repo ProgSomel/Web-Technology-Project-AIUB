@@ -22,8 +22,17 @@ function checkUsers($tableName, $email, $password, $conn) {
     return $result;
 }
 
+//! Getting User All Informations
+function getUserInfo($tableName, $email, $conn) {
+    $sql = "SELECT * FROM $tableName WHERE email = '$email'";
+    $result = $conn->query($sql);
+    return $result;
 
 }
+}
+
+
+
 
 
 ?>

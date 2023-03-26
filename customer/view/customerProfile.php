@@ -138,117 +138,112 @@ include '../../layouts/header.php';
 </td>
 <form method="post">
 <td><input type="text" name="search"size="30"><button type="button" name="btn">search</button></td>
-<td><img src=\"$adminProfilePic\"/> Hello
-<?php
 
-echo $_SESSION["email"]; ?></td>
+<td>
+<div align="center">
+    <a href="../view/login.php"> <img src="../../assets/logout_icon.png" alt="" width="30px" height="30px"> </a>
+</div>
+</td>
+
 </form>
 </tr>
 </table>
 
     <hr>
-    <br>
+  
     
 
 <!-- Personal Information  -->
 <table>
     <tr>
+    <td> Hello
+<?php
+
+echo $_SESSION["email"]; ?>
+
+</td> 
+    </tr>
+    <tr>
         <td>
-        
+            <img src="<?php echo $File ?>" alt="profile-picture" width="100px" height="100px"><br>
 First Name: <?php echo $fname; ?>
 <br>Last Name: <?php echo $lname; ?>
 <br>User Name: <?php echo $userName; ?>
 <br>Phone Number: <?php echo $phoneNumber; ?>
-<br>Email: <?php echo $email; ?>
 <br>Gender: <?php echo $gender; ?>
 <br>City: <?php echo $city; ?>
 <br>Address: <?php echo $address; ?>
 </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-            
-                <button>Insert Products</button>
-                <button>View Products</button>
-                <button>Insert Category</button>
-                <button>View Category</button>
-                <button>Insert Brands</button>
-                <button>View Brands</button>
-                <button>All Orders</button>
-                <button>All Payments</button>
-                <button>List Users</button>
-         
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </td>
+        
     </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
 </table>
 
-<div align="center">
-    <a href="../view/login.php">Log Out</a>
-</div>
+
 <?php
 include "../../layouts/footer.php";
 ?>

@@ -161,6 +161,9 @@ include 'layouts/header.php';
 
 <td >
 <a href="home.php">HOME</a>
+<a href="">Admin</a>
+<a href="">Employee</a>
+<a href="">Supplier</a>
 <a href="customer/view/login.php">CUSTOMER</a>
 
 </td>
