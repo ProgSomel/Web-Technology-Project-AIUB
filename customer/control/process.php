@@ -1,4 +1,5 @@
 <?php
+include("../model/mydb.php");
 $fnameMessage = '';
 $lnameMessage = '';
 $userNameMessage = '';
@@ -128,8 +129,14 @@ if ( isset( $_REQUEST['submit'] ) ) {
         $genderMessage = "  Please enter your Gender !";
         $hasError = 1;
     } else {
+        if ( isset( $gender ) ) {
         $genderMessage = "   Your Gender : $gender ";
     }
+    else {
+        $genderMessage = "gender not specified";
+    }
+
+}
     //? -----------City-----------
     if ( isset( $_REQUEST['city'] ) && $_REQUEST['city'] == 'Select City' ) {
         $cityMessage = ' City is Missing! Please select a city.';
@@ -200,44 +207,64 @@ if ( isset( $_REQUEST['submit'] ) ) {
         $profileImageMessage = $_FILES['profileImage']['name'];
         move_uploaded_file( $_FILES["profileImage"]["tmp_name"], "../uploads/" . $_REQUEST['email'] . ".jpg" );
     }
-    //!----- Data Write in File Using JSON------
+    //!----- Data  Insert In SQL------
     if ( $hasError == 0 ) {
-        //? ----To get Previous Data-------
-        $existingData = file_get_contents( "../data/jsondata.json" );
-        //? Converting existing data to PHP Data
-        $phpData = json_decode( $existingData );
-        //? Getting Form Data as Array
-        $formData = array(
-            "fname"           => $_REQUEST['fname'],
-            "lname"           => $_REQUEST['lname'],
-            "userName"        => $_REQUEST['userName'],
-            "dateOfBirth"     => $_REQUEST['dateOfBirth'],
-            "phoneNumber"     => $_REQUEST['phoneNumber'],
-            "email"           => $_REQUEST['email'],
-            "gender"          => $_REQUEST['gender'],
-            "city"            => $_REQUEST['city'],
-            "zipCode"         => $_REQUEST['zipCode'],
-            "address"         => $_REQUEST['address'],
-            "password"        => $_REQUEST['password'],
-            "confirmPassword" => $_REQUEST['confirmPassword'],
-            "File"            => "../uploads/" . $_REQUEST['email'] . ".jpg",
 
-        );
-        //? For adding existing data with new Data
-        //? For Array Concat We do Like This
-        $phpData[] = $formData;
-
-        //? ---Converting PHP Data to JSON Data------
-        $jsonFormData = json_encode( $phpData, JSON_PRETTY_PRINT ); //?It will Return JSON object
-
-        //Wrting File
-        if ( file_put_contents( "../data/jsondata.json", $jsonFormData ) ) {
-            echo "File Written Successfully.";
-            echo " Please login Now";
-
-        } else {
-            echo "File Written Failed !";
+        $mydb= new MyDB();//? Creating A Object $mydb for Class MyDB
+        $conobj= $mydb->openCon();//?Accessing openCon() function using $mydb object
+        //! Accessing insertData() function using $mydb object
+        $result=$mydb->insertData("customer",$_REQUEST['fname'],$_REQUEST['lname'],
+        $_REQUEST['userName'],$_REQUEST['dateOfBirth'],$_REQUEST['phoneNumber'],$_REQUEST['email'],
+        $_REQUEST['gender'], $_REQUEST['city'], $_REQUEST['zipCode'], $_REQUEST['address'], $_REQUEST['password'],$_REQUEST['confirmPassword'], "../uploads/" . $_REQUEST['email'] . ".jpg", $conobj);
+        if($result===TRUE)//? === will check the value and it will also check the data type of both left and right 
+        {
+            echo "Successfully Registered. Please login";
         }
+        else
+        {
+            echo "Error".$conobj->error;
+        }
+
+
+
+
+
+        // //? ----To get Previous Data-------
+        // $existingData = file_get_contents( "../data/jsondata.json" );
+        // //? Converting existing data to PHP Data
+        // $phpData = json_decode( $existingData );
+        // //? Getting Form Data as Array
+        // $formData = array(
+        //     "fname"           => $_REQUEST['fname'],
+        //     "lname"           => $_REQUEST['lname'],
+        //     "userName"        => $_REQUEST['userName'],
+        //     "dateOfBirth"     => $_REQUEST['dateOfBirth'],
+        //     "phoneNumber"     => $_REQUEST['phoneNumber'],
+        //     "email"           => $_REQUEST['email'],
+        //     "gender"          => $_REQUEST['gender'],
+        //     "city"            => $_REQUEST['city'],
+        //     "zipCode"         => $_REQUEST['zipCode'],
+        //     "address"         => $_REQUEST['address'],
+        //     "password"        => $_REQUEST['password'],
+        //     "confirmPassword" => $_REQUEST['confirmPassword'],
+        //     "File"            => "../uploads/" . $_REQUEST['email'] . ".jpg",
+
+        // );
+        // //? For adding existing data with new Data
+        // //? For Array Concat We do Like This
+        // $phpData[] = $formData;
+
+        // //? ---Converting PHP Data to JSON Data------
+        // $jsonFormData = json_encode( $phpData, JSON_PRETTY_PRINT ); //?It will Return JSON object
+
+        // //Wrting File
+        // if ( file_put_contents( "../data/jsondata.json", $jsonFormData ) ) {
+        //     echo "File Written Successfully.";
+        //     echo " Please login Now";
+
+        // } else {
+        //     echo "File Written Failed !";
+        // }
 
     }
 }

@@ -380,9 +380,6 @@ include '../../layouts/header.php';
       <tr></tr>
           <tr>
           <td></td>
-            <td>
-                <input type="checkbox" name="iAcceptCheckbox" id="" required> I Accept
-            </td>
           </tr>
           <tr></tr>
           <tr></tr>
@@ -425,7 +422,7 @@ include '../../layouts/header.php';
 
           <tr>
           <td></td>
-            <td>Already have an Account? <a href="../../admin/view/login.php">login</a> </td>
+            <td>Already have an Account? <a href="../view/login.php">login</a> </td>
             <td></td>
             <td></td>
             <td></td>

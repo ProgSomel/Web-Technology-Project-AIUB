@@ -239,7 +239,7 @@ echo $errorMessage;
             <tr></tr>
             <tr>
             <td>
-                    Don't Have an Account ? <a href="../../admin/view/registration.php">Register</a>
+                    Don't Have an Account ? <a href="../view/registration.php">Register</a>
                 </td>
             </tr>
         </table>
