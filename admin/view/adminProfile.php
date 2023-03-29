@@ -334,34 +334,29 @@
                        <td></td>
                        <td></td>
                        <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                    <td><button a="">Insert Products</button></td>
+                       
+                    <td><button><a href="">Insert Products</a></button></td>
                     <td></td>
-                    <td><button a="">View Products</button></td>
+                    <td><button><a href="">View Products</a></button></td>
                     <td></td>
-                    <td><button a="">Insert Categories</button></td>
+                    <td><button><a href="adminProfile.php?insert_category">Insert Categories</a></button></td>
                     <td></td>
-                    <td><button a="">View categories</button></td>
+                    <td><button><a href="">View Categories</a></button></td>
                     <td></td>
-                    <td><button a="">All Orders</button></td>
                     <td></td>
-                    <td><button a="">All Payments</button></td>
+                    <td><button><a href="adminProfile.php?insert_brand">Insert Brands</a></button></td>
                     <td></td>
-                    <td><button a="">List Users</button></td>
+                    <td><button><a href="">View Brands</a></button></td>
                     <td></td>
-                    <td><button a="">Logout</button></td>
+                    <td><button><a href="">All Orders</a></button></td>
                     <td></td>
+                    <td><button><a href="">All Payments</a></button></td>
+                    <td></td>
+                    <td><button><a href="">List Users</a></button></td>
+                    <td></td>
+                    <td><button><a href="">Logout</a></button></td>
+                    <td></td>
+                   
                     </tr>
                     <tr>
                         <td>
@@ -369,6 +364,21 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+            <div>
+            </div>
+            <div>
+                <br>
+                <br>
+                <br>
+                <?php
+                if(isset($_GET['insert_category'])) {
+                    include('insert_categories.php');
+                }
+                if(isset($_GET['insert_brand'])) {
+                    include('insert_brands.php');
+                }
+                ?>
             </div>
         </main>
         <!-- footer  -->

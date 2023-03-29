@@ -37,6 +37,22 @@ function getUserInfo($tableName, $email, $conn) {
     return $result;
 
 }
+
+//! Inserting Categories to Database
+function insertCategory($tableName,$category_title ,$conn){
+    //? SQL Query for Inserting Data into Database
+    $sql="INSERT INTO $tableName (category_title) VALUES ('$category_title')";
+    //! Executing Query
+    $result=$conn->query($sql);
+    return $result;
+    }
+//! Getting Categories From Database
+function getCategories($tableName, $category_title, $conn) {
+    $sql = "SELECT * FROM $tableName WHERE category_title = '$category_title'";
+    $result = $conn->query($sql);
+    return $result;
+
+}
 }
 
 

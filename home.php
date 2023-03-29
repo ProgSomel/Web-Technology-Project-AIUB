@@ -14,9 +14,9 @@ if ( isset( $_COOKIE["visit"] ) ) {
 </head>
 <body>
   <?php
-     echo $printCookie;
-   ?>
-  
+echo $printCookie;
+?>
+
 
 <header>
 <table align="right">
@@ -161,9 +161,9 @@ include 'layouts/header.php';
 
 <td >
 <a href="home.php">HOME</a>
-<a href="">Admin</a>
-<a href="">Employee</a>
-<a href="">Supplier</a>
+<a href="admin/view/adminProfile.php">ADMIN</a>
+<a href="">EMPLOYEE</a>
+<a href="">SUPPLIER</a>
 <a href="customer/view/login.php">CUSTOMER</a>
 
 </td>
