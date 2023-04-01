@@ -1,4 +1,7 @@
+<?php
+include '../control/insertBrandProcess.php';
 
+?>
 <html>
 <head>
   <title>Insert Brands</title>
@@ -10,15 +13,13 @@
     <div align="center">
     <h1>INSERT BRAND</h1>
     </div>
-    <br>
-    <br>
-    <br>
-    
-  <div align="center" >
-  <input type="text" class="form-control" placeholder="Insert Brand" name="brand_title" >
-  <!-- <input type="submit" name="insert_cat" value="Insert Categories"> -->
-  <button>Insert Brands</button>
+    <form action="" method="post">
+    <div align="center" >
+  <input type="text" class="form-control" placeholder="Insert Brands" name="brand_title" >
+  <input type="submit" name="insert_brand" value="Insert Brand">
+
 </div>
+    </form>
   </main>
 </body>
 </html>

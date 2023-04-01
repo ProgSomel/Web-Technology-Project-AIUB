@@ -368,9 +368,6 @@
             <div>
             </div>
             <div>
-                <br>
-                <br>
-                <br>
                 <?php
                 if(isset($_GET['insert_category'])) {
                     include('insert_categories.php');

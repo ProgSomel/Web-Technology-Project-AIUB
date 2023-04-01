@@ -38,6 +38,8 @@ function getUserInfo($tableName, $email, $conn) {
 
 }
 
+//! ------------------------CATEGORIES-------------------
+
 //! Inserting Categories to Database
 function insertCategory($tableName,$category_title ,$conn){
     //? SQL Query for Inserting Data into Database
@@ -46,13 +48,45 @@ function insertCategory($tableName,$category_title ,$conn){
     $result=$conn->query($sql);
     return $result;
     }
-//! Getting Categories From Database
+//! Getting Categories with Condition on category_title From Database
 function getCategories($tableName, $category_title, $conn) {
     $sql = "SELECT * FROM $tableName WHERE category_title = '$category_title'";
     $result = $conn->query($sql);
     return $result;
 
 }
+//! Getting All Category for Displaying on Home Page From Database
+function getAllCategory($tableName, $conn) {
+    $sql = "SELECT * FROM $tableName";
+    $result = $conn->query($sql);
+    return $result;
+
+}
+//! ------------------------BRANDS-------------------
+
+//! Inserting Brands to Database
+function insertBrand($tableName,$brand_title ,$conn){
+    //? SQL Query for Inserting Brand into Database
+    $sql="INSERT INTO $tableName (brand_title) VALUES ('$brand_title')";
+    //! Executing Query
+    $result=$conn->query($sql);
+    return $result;
+    }
+//! Getting brand with condition on brand_title From Database
+function getBrands($tableName, $brand_title, $conn) {
+    $sql = "SELECT * FROM $tableName WHERE brand_title = '$brand_title'";
+    $result = $conn->query($sql);
+    return $result;
+
+}
+//! Getting All Brand for Displaying on Home Page From Database
+function getAllBrand($tableName, $conn) {
+    $sql = "SELECT * FROM $tableName";
+    $result = $conn->query($sql);
+    return $result;
+
+}
+
 }
 
 

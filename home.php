@@ -1,4 +1,5 @@
 <?php
+include 'admin/model/mydb.php';
 $printCookie = '';
 setcookie( "visit", "1", time() + ( 86400 ) * 30 );
 if ( isset( $_COOKIE["visit"] ) ) {
@@ -6,6 +7,7 @@ if ( isset( $_COOKIE["visit"] ) ) {
 } else {
     $printCookie = "welcome";
 }
+
 
 ?>
 <html>
@@ -227,42 +229,37 @@ include 'layouts/header.php';
         <td></td>
 
     <td align="right">
+      <!-- Brands  -->
     <div>
-
+    <h1>Categories</h1></a>
+      <?php
+         $mydb= new MyDB();//? Creating A Object $mydb for Class MyDB
+         $conobj= $mydb->openCon();//?Accessing openCon() function using $mydb object
+         $result = $mydb->getAllCategory("categories",  $conobj);
+         while($row_data = mysqli_fetch_assoc($result)) {
+          $categoryName = $row_data['category_title'];
+          $categoryId = $row_data['category_id'];
+          echo "<li><a href=''>$categoryName</a></li>";
+         };  
+        
+      ?>
     </div>
-    <select align ="right"  name="category" value="Category">
-    <option value="1">Electronic Device</option>
-    <option value="2">Electronic Accessories</option>
-    <option value="3">Home Appliances</option>
-    <option value="4">Health and Beauty</option>
-    <option value="5">Men's Fashion</option>
-    <option value="6">Women's Fashion</option>
-    <option value="7">Watches and Accessories</option>
-    <option value="8">Automobiles & Motorbike</option>
-</select>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <div>
+      <!-- Brands  -->
+    <h1>Brands</h1></a>
+    <?php
+         $mydb= new MyDB();//? Creating A Object $mydb for Class MyDB
+         $conobj= $mydb->openCon();//?Accessing openCon() function using $mydb object
+         $result = $mydb->getAllBrand("brands",  $conobj);
+         while($row_data = mysqli_fetch_assoc($result)) {
+          $brandName = $row_data['brand_title'];
+          $brandId = $row_data['brand_id'];
+          echo "<li><a href=''>$brandName</a></li>";
+
+         };  
+         ?>
+    </div>
+   
     </td>
       </tr>
       <tr>
@@ -299,8 +296,6 @@ include 'layouts/header.php';
           <button>Add to Cart</button>
           <button>View More</button>
         </td>
-        <td></td>
-        <td></td>
         <td></td>
         <td></td>
         <td></td>
