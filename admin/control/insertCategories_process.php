@@ -5,7 +5,7 @@
     $mydb= new MyDB();//? Creating A Object $mydb for Class MyDB
         $conobj= $mydb->openCon();//?Accessing openCon() function using $mydb object
         $result = $mydb->getCategories("categories", $_REQUEST["category_title"], $conobj);
-        if( $result->num_rows>0) {
+        if($result->num_rows>0) {
             echo "<script>alert('This Category is alreay presented in Database')</script>";  
         }
         else {

@@ -131,8 +131,8 @@ include '../../layouts/header.php';
 
 
 <td >
-<a href="../../home.php">HOME</a>
-<a href="../view/login.php">ADMIN</a>
+<a href="../../index.php">HOME</a>
+<a href="../../admin/view/adminLogin.php">ADMIN</a>
 <a href="./View/Employee_login.php">EMPLOYEE</a>
 <a href="./View/Login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
 </td>
@@ -186,7 +186,7 @@ include '../../layouts/header.php';
             <tr></tr>
             <tr>
             <th>
-                <h1>Login</h1>
+                <h1>Customer Login</h1>
             </th>
             </tr>
             <tr></tr>

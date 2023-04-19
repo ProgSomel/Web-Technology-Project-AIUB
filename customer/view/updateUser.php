@@ -1,11 +1,10 @@
 <?php
-include '../control/process.php';
+include ("../control/update_control.php");
 ?>
-
 <html>
-    <head></head>
-    <body>
-    <header>
+
+<body>
+<header>
 <table align="right">
 <tr>
 <td><?php
@@ -129,10 +128,11 @@ include '../../layouts/header.php';
 
 
 <td >
-<a href="../../home.php">HOME</a>
-<a href="login.php">ADMIN</a>
+<a href="../../index.php">HOME</a>
+<a href="../../admin/view/adminLogin.php">ADMIN</a>
 <a href="./View/Employee_login.php">EMPLOYEE</a>
-<a href="./View/Login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
+<a href="../view/login.php">CUSTOMER</a>     
+<a href="./View/Vlogin.php">SUPLIER</a>
 </td>
 <form method="post">
 <td><input type="text" name="search"size="30"><button type="button" name="btn">search</button></td>
@@ -142,17 +142,10 @@ include '../../layouts/header.php';
 </table>
 </header>
 <hr>
-      
-      
-     
 
-      <main>
-      <div align = "center" >
-<h1>User Registration</h1>
-</div>
-      <div align="center">
-    <form action="" method="post" enctype="multipart/form-data">
-        <table>
+<div align="center">
+<form action="" method="POST" enctype="multipart/form-data">
+<table>
             <tr></tr>
             <tr></tr>
             <tr></tr>
@@ -164,7 +157,7 @@ include '../../layouts/header.php';
             <!------------ First Name ------- -->
             <th>First Name:</th>
             <td>
-                <input type="text" name="fname" id="" placeholder="Enter your First Name"  ><?php echo $fnameMessage ?><br>
+                <input type="text" name="fname" value="<?php echo $fname; ?>"  id=""  >
             </td>
 
           </tr>
@@ -180,7 +173,7 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="text" name="lname" id="" placeholder="Enter your Last Name" ><?php echo $lnameMessage ?><br>
+                <input type="text" name="lname" id="" placeholder="Enter your Last Name" value="<?php echo   $lname; ?>" >
             </td>
           </tr>
           <tr></tr>
@@ -194,7 +187,7 @@ include '../../layouts/header.php';
           <th>User Name: </th>
 
             <td>
-                <input type="text" name="userName" id="" placeholder="Enter your User Name"><?php echo $userNameMessage ?><br>
+                <input type="text" name="userName" id="" placeholder="Enter your User Name" value="<?php echo $userName?>">
             </td>
           </tr>
           <tr></tr>
@@ -210,7 +203,7 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="date" name="dateOfBirth" id=""><?php echo $dateOfBirthMessage ?><br>
+                <input type="date" name="dateOfBirth" id="" value="<?php echo $dateOfBirth?>">
             </td>
           </tr>
           <tr></tr>
@@ -226,8 +219,8 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="text" name="phoneNumberCountryCode" id="" value="+88" size="1">
-                <input type="text" name="phoneNumber" id="" placeholder="Enter your Number" ><?php echo $phoneNumberMessage ?>
+                <input type="text" name="phoneNumberCountryCode" id="" value="+880" size="1">
+                <input type="text" name="phoneNumber" id="" value="<?php echo $phoneNumber?>" >
             </td>
           </tr>
           <tr></tr>
@@ -237,16 +230,6 @@ include '../../layouts/header.php';
           <tr></tr>
           <tr></tr>
           <tr></tr>
-          <tr>
-            <!-------Email ------ -->
-            <th>Email: </th>
-
-
-            <td>
-                <input type="email" name="email" id="" placeholder="abc@example.com">
-                <?php echo $emailMessage ?>
-            </td>
-          </tr>
           <tr></tr>
           <tr></tr>
           <tr></tr>
@@ -261,9 +244,18 @@ include '../../layouts/header.php';
 
 
             <td>
-            <input type="radio" name="gender" id="" value = "Male">Male
-            <input type="radio" name="gender" id="" value = "Female">Female
-            <input type="radio" name="gender" id="" value = "NotInterested">Not Interested. <?php echo $genderMessage ?>
+            <input type="radio" name="gender" id="" value = "Male" <?php
+if($gender=="Male")
+echo "checked";
+?>>Male
+            <input type="radio" name="gender" id="" value = "Female" <?php
+if($gender=="Female")
+echo "checked";
+?>>Female
+            <input type="radio" name="gender" id="" value = "NotInterested" <?php
+if($gender=="NotInterested")
+echo "checked";
+?>>Not Interested. 
             </td>
           </tr>
           <tr></tr>
@@ -281,15 +273,31 @@ include '../../layouts/header.php';
             <td>
             <select  name="city">
     <option value="Select City">Select City</option>
-    <option value="Dhaka">Dhaka</option>
-    <option value="Gazipur">Gazipur</option>
-    <option value="Mymensingh">Mymensingh</option>
-    <option value="Rajshahi">Rajshahi</option>
-    <option value="Chittagonj">Chittagonj</option>
-    <option value="Comilla">Comilla</option>
-    <option value="Sylhet">Sylhet</option>
-    <option value="Rangpur">Rangpur</option>
-</select> <?php echo $cityMessage ?>
+    <option value="Dhaka" <?php 
+if($city=="Dhaka")
+echo "selected"; ?>>Dhaka</option>
+    <option value="Gazipur" <?php 
+if($city=="Gazipur")
+echo "selected"; ?>>Gazipur</option>
+    <option value="Mymensingh" <?php 
+if($city=="Mymensingh")
+echo "selected"; ?>>Mymensingh</option>
+    <option value="Rajshahi" <?php 
+if($city=="Rajshahi")
+echo "selected"; ?>>Rajshahi</option>
+    <option value="Chittagonj" <?php 
+if($city=="Chittagonj")
+echo "selected"; ?>>Chittagonj</option>
+    <option value="Comilla" <?php 
+if($city=="Comilla")
+echo "selected"; ?>>Comilla</option>
+    <option value="Sylhet" <?php 
+if($city=="Sylhet")
+echo "selected"; ?>>Sylhet</option>
+    <option value="Rangpur" <?php 
+if($city=="Rangpur")
+echo "selected"; ?>>Rangpur</option>
+</select>
             </td>
           </tr>
           <tr></tr>
@@ -306,7 +314,7 @@ include '../../layouts/header.php';
 
 
             <td>
-<input type="text" name="zipCode" id="" placeholder="Enter Zip Code"> <?php echo $zipCodeMessage ?>
+<input type="text" name="zipCode" id="" value="<?php echo $zipCode ?>"> 
             </td>
           </tr>
           <tr></tr>
@@ -322,7 +330,7 @@ include '../../layouts/header.php';
 
 
             <td>
-                <textarea name="address" id="" cols="25" rows="5"></textarea> <?php echo $addressMessage ?>
+                <textarea name="address" id="" cols="25" rows="5" value="<?php echo $address ?>"></textarea> 
             </td>
           </tr>
           <tr></tr>
@@ -338,7 +346,7 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="password" name="password" id="" placeholder="Enter Password"><?php echo $passwordMessage ?>
+                <input type="password" name="password" id="" value="<?php echo $password ?>">
             </td>
           </tr>
           <tr></tr>
@@ -348,15 +356,7 @@ include '../../layouts/header.php';
           <tr></tr>
           <tr></tr>
           <tr></tr>
-          <tr>
-            <!------ Confirm Password ------ -->
-            <th>Confirm Password: </th>
-
-
-            <td>
-                <input type="password" name="confirmPassword" id="" placeholder="Confirm your Password"><?php echo $confirmPasswordMessage ?>
-            </td>
-          </tr>
+          
           <tr></tr>
           <tr></tr>
           <tr></tr>
@@ -372,7 +372,8 @@ include '../../layouts/header.php';
            <th>Set Profile Picture: </th>
 
      <td>
-  <input type="file" name="profileImage" id=""><?php echo $profileImageMessage ?>
+  <input type="file" name="profileImage" id="">
+  <img src="<?php echo $File; ?>" width="100" height="100">
      </td>
       </tr>
       <tr></tr>
@@ -399,8 +400,7 @@ include '../../layouts/header.php';
 <td></td>
             <td>
 
-              <input type="reset" value="Reset">
-              <input type="submit" name="submit" value="Submit"/>
+            <input type="submit" name="update" value="Update">
 
             </td>
 
@@ -419,25 +419,13 @@ include '../../layouts/header.php';
           <tr></tr>
           <tr></tr>
           <tr></tr>
-
-          <tr>
-          <td></td>
-            <td>Already have an Account? <a href="../view/login.php">login</a> </td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
         </table>
-
-    </form>
+</form>
 </div>
-      </main>
 <footer>
 <?php
 include "../../layouts/footer.php";
 ?>
 </footer>
-
-
-    </body>
+</body>
 </html>

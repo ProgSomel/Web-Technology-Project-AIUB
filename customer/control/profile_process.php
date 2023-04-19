@@ -15,12 +15,15 @@ $mydb = new MyDB();
                 $fname = $row['fname'];
                 $lname = $row['lname'];
                 $userName = $row['userName'];
+                $dateOfBirth = $row['dateOfBirth'];
                 $phoneNumber = $row['phoneNumber'];
                 $email = $row['email'];
                 $gender = $row['gender'];
                 $city = $row['city'];
                 $address = $row['address'];
                 $File = $row['File'];
+                $password = $row['password'];
+                $zipCode = $row['zipCode'];
 
               }
         }

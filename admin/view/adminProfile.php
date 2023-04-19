@@ -7,8 +7,11 @@
         <div>
             <table>
                 <tr>
+               
                     <td>
-                    <img src="../../assets/logo_website.png" alt="Website-logo" width="50px" height="50px">
+                    <?php
+include '../../layouts/header.php';
+?>
                     </td>
                     <td></td>
                     <td></td>
@@ -51,6 +54,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    
+              
                     <td></td>
                     <td></td>
                     <td></td>
@@ -83,6 +88,15 @@
                     <td></td>
                     <td></td>
                     <td></td>
+
+                    <td>
+                        <a href="../../index.php">HOME</a>
+                        <a href="../view/adminProfile.php">ADMIN</a>
+                        <a href="./View/Employee_login.php">EMPLOYEE</a>
+<a href="../../customer/view/login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
+
+
+                </td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -93,6 +107,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
+              
+                 
                     <td></td>
                     <td></td>
                     <td></td>
@@ -107,124 +123,10 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    
+                   
+                    
+                    
                     <td></td>
                     <td></td>
                     <td></td>
@@ -288,6 +190,9 @@
                             <a href="">Welcome guest</a>
                         </div>
                     </td>
+                    <td>
+                    <a href="../view/adminLogin.php"> <img src="../../assets/logout_icon.png" alt="" width="30px" height="30px"> </a>
+                    </td>
                 </tr>
             </table>
 
@@ -335,7 +240,7 @@
                        <td></td>
                        <td></td>
                        
-                    <td><button><a href="">Insert Products</a></button></td>
+                    <td><button><a href="insert_products.php">Insert Products</a></button></td>
                     <td></td>
                     <td><button><a href="">View Products</a></button></td>
                     <td></td>
@@ -352,10 +257,9 @@
                     <td></td>
                     <td><button><a href="">All Payments</a></button></td>
                     <td></td>
-                    <td><button><a href="">List Users</a></button></td>
+                    <td><button><a href="adminProfile.php?list_user">List Users</a></button></td>
                     <td></td>
-                    <td><button><a href="">Logout</a></button></td>
-                    <td></td>
+                   
                    
                     </tr>
                     <tr>
@@ -373,6 +277,9 @@
                     include('insert_categories.php');
                 }
                 if(isset($_GET['insert_brand'])) {
+                    include('insert_brands.php');
+                }
+                if(isset($_GET['list_user'])) {
                     include('insert_brands.php');
                 }
                 ?>

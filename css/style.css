@@ -1,0 +1,18 @@
+/*! home page CSS  */
+.nav-table {
+    background-color: #F6F1F1;
+
+}
+.home-productDisplay {
+    column-count: 2;
+}
+/*? Card Style  */
+.home-card-container {
+    display: flex; 
+    height: 100px;
+    gap: 50px;
+
+}
+.search-btn {
+    color: blue;
+}

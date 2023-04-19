@@ -6,7 +6,6 @@ include '../control/insertCategories_process.php';
   <title>Insert Category</title>
 </head>
 <body>
-
   <!-- main  -->
   <main>
   <div align="center">

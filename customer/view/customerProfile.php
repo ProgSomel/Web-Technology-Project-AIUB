@@ -132,7 +132,7 @@ include '../../layouts/header.php';
 
 <td >
 <a href="../../home.php">HOME</a>
-<a href="../view/login.php">ADMIN</a>
+<a href="../../admin/view/adminLogin.php">ADMIN</a>
 <a href="./View/Employee_login.php">EMPLOYEE</a>
 <a href="./View/Login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
 </td>
@@ -169,10 +169,14 @@ echo $_SESSION["email"]; ?>
 First Name: <?php echo $fname; ?>
 <br>Last Name: <?php echo $lname; ?>
 <br>User Name: <?php echo $userName; ?>
+<br>Date of Birth: <?php echo $dateOfBirth?>
 <br>Phone Number: <?php echo $phoneNumber; ?>
 <br>Gender: <?php echo $gender; ?>
 <br>City: <?php echo $city; ?>
 <br>Address: <?php echo $address; ?>
+<br>Password: <?php echo $password; ?>
+<br>
+<br><a href='updateUser.php?email="<?php echo $email?>"'>Edit</a>
 </td>
         
     </tr>

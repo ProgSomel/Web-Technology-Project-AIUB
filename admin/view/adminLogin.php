@@ -1,5 +1,5 @@
 <?php
-include '../control/login_control.php'
+include '../control/admin_login_control.php'
 ?>
 <html>
 <head>
@@ -131,10 +131,10 @@ include '../../layouts/header.php';
 
 
 <td >
-<a href="../../home.php">HOME</a>
-<a href="../view/login.php">ADMIN</a>
+<a href="../../index.php">HOME</a>
+<a href="../view/adminLogin.php">ADMIN</a>
 <a href="./View/Employee_login.php">EMPLOYEE</a>
-<a href="./View/Login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
+<a href="../../customer/view/login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
 </td>
 <form method="post">
 <td><input type="text" name="search"size="30"><button type="button" name="btn">search</button></td>
@@ -148,7 +148,7 @@ include '../../layouts/header.php';
    <table>
     <tr>
         <td>
-            <img src="http://localhost/webTechnology/Web-Technology-Project-AIUB/assets/login.webp" alt="" width="700px" height="400px">
+            <img src="../../assets/adminImages/adminLoginimage.jfif" alt="" width="700px" height="400px">
         </td>
         <td>
         <div>
@@ -186,7 +186,7 @@ include '../../layouts/header.php';
             <tr></tr>
             <tr>
             <th>
-                <h1>Login</h1>
+                <h1>Admin Login</h1>
             </th>
             </tr>
             <tr></tr>
@@ -238,9 +238,6 @@ echo $errorMessage;
             <tr></tr>
             <tr></tr>
             <tr>
-            <td>
-                    Don't Have an Account ? <a href="../view/registration.php">Register</a>
-                </td>
             </tr>
         </table>
     </form>
