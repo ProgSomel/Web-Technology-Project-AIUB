@@ -14,6 +14,20 @@ function checkUsers($tableName, $email, $password, $conn) {
     return $result;
 }
 
+//!Getting All Users
+function getAllUsers($tablename, $conn)
+{
+    $sql="SELECT * FROM $tablename";
+    $result = $conn->query($sql);
+    return $result;
+}
+//! Delete Users
+function deleteUser($tablename, $conn, $email){
+    $sql= "DELETE FROM $tablename WHERE email = '$email' ";
+    $result=$conn->query($sql);
+    return $result;
+    }
+
 
 
 
@@ -102,12 +116,43 @@ function insertProducts($tableName, $productTtile,$productDescription, $productK
         $result = $conn->query($sql);
         return $result ;
     }
+    //! Getting Product by Product_Id
+    function getProductByProductId($tableName, $productId, $conn) {
+        $sql = "SELECT * FROM $tableName WHERE product_id='$productId'";
+        $result = $conn->query($sql);
+        return $result ;
+    }
 
     //! View More Button
     function viewMore($tableName, $productId, $conn) {
-        $sql = "SELECT * FROM $tableName WHERE product_id=$productId";
+        $sql = "SELECT * FROM $tableName WHERE product_id='$productId'";
         $result = $conn->query($sql);
         return $result ;
+    }
+    //! Inserting into Cart
+    function insertIntoCart($tablename, $productId, $userId, $quantity, $conn) {
+        $sql ="INSERT INTO $tablename (product_id,userId, quantity) VALUES ('$productId', '$userId', '$quantity')";
+        //! Executing Query
+                $result = $conn->query( $sql );
+                return $result;
+    }
+    //! Getting value from cart table
+    function getCartValue($tableName, $userId, $productId, $conn) {
+        $sql = "SELECT * FROM $tableName where userId='$userId' AND  product_id = '$productId'";
+        $result=$conn->query($sql);
+        return $result;
+    }
+    //! Getting cart Numbers
+    function getCartValueForItems($tableName, $userId, $conn) {
+        $sql = "SELECT * FROM $tableName where userId='$userId'";
+        $result=$conn->query($sql);
+        return $result;
+    }
+    //! Getting Total Cart Amount
+    function totalCartPrice($tableName, $userId, $conn) {
+        $sql = "SELECT * FROM $tableName where userId='$userId'";
+        $result=$conn->query($sql);
+        return $result;
     }
 
 }

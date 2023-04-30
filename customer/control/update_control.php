@@ -6,7 +6,7 @@ $selected = "";
 $email = $_REQUEST["email"];
 $mydb = new MyDB();
 $conobj = $mydb->openCon();
-$result = $mydb->getUserInfo( "customer", $_SESSION["email"], $conobj );
+$result = $mydb->getUserInfo( "customer", $email, $conobj );
 if ( $result->num_rows > 0 ) {
     //? While will run until all columns values gotten after that it will stop
     while ( $row = $result->fetch_assoc() ) { //?Here Fetch method will convert data into php associative array
@@ -44,8 +44,11 @@ if ( isset( $_REQUEST["update"] ) ) {
         $_REQUEST["zipCode"],
         $_REQUEST["address"],
         $_REQUEST["password"], $File, $email, $conobj);
+        echo "Updated Successfully";
+
 }
 else {
+    echo "Error!";
 
 }
 

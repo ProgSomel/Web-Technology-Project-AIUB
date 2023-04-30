@@ -6,14 +6,14 @@
         $conobj= $mydb->openCon();//?Accessing openCon() function using $mydb object
         $result = $mydb->getCategories("categories", $_REQUEST["category_title"], $conobj);
         if($result->num_rows>0) {
-            echo "<script>alert('This Category is alreay presented in Database')</script>";  
+            echo "This Category is alreay presented in Database";  
         }
         else {
             //! Accessing insertCategory() from mydb.php function using $mydb object
         $result=$mydb->insertCategory("categories",$_POST['category_title'], $conobj);
         if($result===TRUE)//? === will check the value and it will also check the data type of both left and right 
         {
-            echo "<script>alert('Category Has been inserted Successfully')</script>";
+            echo "Category Has been inserted Successfully";
         }
         else
         {

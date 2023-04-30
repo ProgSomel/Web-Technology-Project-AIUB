@@ -49,6 +49,7 @@ class MyDB { //? Creating a class Called MyDB
         $result=$conn->query($sql);
         return $result;
         }
+        
 }
 
 ?>

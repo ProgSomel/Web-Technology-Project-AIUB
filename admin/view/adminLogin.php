@@ -4,10 +4,12 @@ include '../control/admin_login_control.php'
 <html>
 <head>
 
-    <title>Document</title>
+    <title>Admin Login Page</title>
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="../../CSS/mystyle.css">
 </head>
 <body >
-<header>
+<header class="admin-loginPage-header">
 <table align="right">
 <tr>
 <td><?php
@@ -136,16 +138,93 @@ include '../../layouts/header.php';
 <a href="./View/Employee_login.php">EMPLOYEE</a>
 <a href="../../customer/view/login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
 </td>
-<form method="post">
-<td><input type="text" name="search"size="30"><button type="button" name="btn">search</button></td>
 <td></td>
-</form>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </table>
+
 </header>
 <hr>
+
+
 <main>
+
+
    <table>
+   
     <tr>
         <td>
             <img src="../../assets/adminImages/adminLoginimage.jfif" alt="" width="700px" height="400px">
@@ -164,7 +243,7 @@ include '../../layouts/header.php';
 
     <div align="center">
 
-    <form action="" method="post">
+    <form action="" method="post" class="adminLogin-form">
 
         <table>
             <tr></tr>
@@ -186,7 +265,7 @@ include '../../layouts/header.php';
             <tr></tr>
             <tr>
             <th>
-                <h1>Admin Login</h1>
+                <h1 class="admin-login-title">Admin Login</h1>
             </th>
             </tr>
             <tr></tr>
@@ -195,7 +274,7 @@ include '../../layouts/header.php';
             <tr></tr>
             <tr></tr>
             <tr>
-                <td>Email: </td>
+                <td class="adminLoginPage-email-title">Email: </td>
 
             </tr>
             <tr>
@@ -205,7 +284,7 @@ include '../../layouts/header.php';
                 </td>
             </tr>
             <tr>
-                <td>Password: </td>
+                <td class="adminLoginPage-password-title">Password: </td>
 
             </tr>
             <tr>
@@ -221,7 +300,7 @@ include '../../layouts/header.php';
             <tr></tr>
             <tr>
                 <td>
-                    <input type="submit" name="login-btn" value="login" >
+                    <input class="admin-login-btn" type="submit" name="login-btn" value="login" >
                 </td>
 
             </tr>

@@ -1,6 +1,7 @@
 <html>
     <head>
-        <title></title>
+        <title>Admin Profile</title>
+        <link rel="stylesheet" href="../../CSS/mystyle.css">
     </head>
     <body>
         <!-- navbar  -->
@@ -240,24 +241,24 @@ include '../../layouts/header.php';
                        <td></td>
                        <td></td>
                        
-                    <td><button><a href="insert_products.php">Insert Products</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="insert_products.php">Insert Products</a></button></td>
                     <td></td>
-                    <td><button><a href="">View Products</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="">View Products</a></button></td>
                     <td></td>
-                    <td><button><a href="adminProfile.php?insert_category">Insert Categories</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="adminProfile.php?insert_category">Insert Categories</a></button></td>
                     <td></td>
-                    <td><button><a href="">View Categories</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="">View Categories</a></button></td>
                     <td></td>
                     <td></td>
-                    <td><button><a href="adminProfile.php?insert_brand">Insert Brands</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="adminProfile.php?insert_brand">Insert Brands</a></button></td>
                     <td></td>
-                    <td><button><a href="">View Brands</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="">View Brands</a></button></td>
                     <td></td>
-                    <td><button><a href="">All Orders</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="">All Orders</a></button></td>
                     <td></td>
-                    <td><button><a href="">All Payments</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="">All Payments</a></button></td>
                     <td></td>
-                    <td><button><a href="adminProfile.php?list_user">List Users</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="../view/showAllUsers.php">Show all Users</a></button></td>
                     <td></td>
                    
                    

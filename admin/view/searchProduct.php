@@ -1,14 +1,7 @@
 <?php
 
 include "../control/home_process.php";
-include "../control/searchProduct_control.php";
-$printCookie = '';
-setcookie( "visit", "1", time() + ( 86400 ) * 30 );
-if ( isset( $_COOKIE["visit"] ) ) {
-    $printCookie = "visited";
-} else {
-    $printCookie = "welcome";
-}
+
 
 ?>
 <html>
@@ -113,55 +106,6 @@ include '../../layouts/header.php';
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-
 
 
 <td >
@@ -170,8 +114,54 @@ include '../../layouts/header.php';
 <a href="">EMPLOYEE</a>
 <a href="">SUPPLIER</a>
 <a href="../../customer/view/login.php">CUSTOMER</a>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+
+
 
 </td>
+<td><a href=""><img src="../../assets/cart icon/cartIcon1.png" alt="" height="40px" width="40px"><sup><?php cartItemNumber(); ?></sup></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+  <a href="">Total Price:<?php TotalCartPrice();?>Tk </a>
+
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
 <form method="post">
 <td><input type="search" placeholder="search" name="search-product"></td>
 <td><input  type="submit" value="Search" class="search-btn" name="search-product-btn"></td>
@@ -196,7 +186,7 @@ echo $printCookie;
             <tr>
             <?php
               //  Calling getProducts() function to Display Data
-              search_product();
+             search_product();
              getClickedCategoryProducts();
              getClickedBrandProducts()
           ?>

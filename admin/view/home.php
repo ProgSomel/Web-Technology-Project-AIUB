@@ -1,19 +1,14 @@
 <?php
 include "../control/home_process.php";
-$printCookie = '';
-setcookie( "visit", "1", time() + ( 86400 ) * 30 );
-if ( isset( $_COOKIE["visit"] ) ) {
-    $printCookie = "visited";
-} else {
-    $printCookie = "welcome";
-}
+
 
 ?>
 <html>
 <head>
   <title>Document</title>
   <!-- CSS Link  -->
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../CSS/mystyle.css">
+  
 </head>
 <body>
   
@@ -45,120 +40,6 @@ include '../../layouts/header.php';
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 
 
 
@@ -170,6 +51,89 @@ include '../../layouts/header.php';
 <a href="../../customer/view/login.php">CUSTOMER</a>
 
 </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+<td><a href="../view/cart.php"><img src="../../assets/cart icon/cartIcon1.png" alt="" height="40px" width="40px"><sup><?php cartItemNumber(); ?></sup></a></td>
+
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+
+<td>
+  <a href="">Total Price:<?php TotalCartPrice();?>Tk </a>
+
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
 <form action="searchProduct.php" method="post">
 <td><input type="search" placeholder="search" name="search-product"></td>
 <td><input  type="submit" value="Search" class="search-btn" name="search-product-btn"></td>
@@ -196,7 +160,8 @@ echo $printCookie;
               //  Calling getProducts() function to Display Data
              getProducts();
              getClickedCategoryProducts();
-             getClickedBrandProducts()
+             getClickedBrandProducts();
+             cart();
           ?>
             </tr>
           </table>
@@ -204,14 +169,14 @@ echo $printCookie;
         </div>
        
         <div>
-        <h1>Categories</h1></a>
+        <h1 class="homePage-Category-title">Categories</h1></a>
       <?php
        getCategories();
 ?>
     
     
       <!-- Brands  -->
-    <h1>Brands</h1></a>
+    <h1 class="homePage-brand-title">Brands</h1></a>
     <?php
     getBrands();
 ?>

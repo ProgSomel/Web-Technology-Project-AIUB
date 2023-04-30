@@ -1,0 +1,120 @@
+/*! home page CSS  */
+.nav-table {
+    background-color: #F6F1F1;
+
+}
+.home-productDisplay {
+    column-count: 2;
+}
+.homePage-Category-title {
+    color: #009FBD;
+}
+.homePage-brand-title {
+    color: #009FBD;
+
+}
+
+/*! Admin Login Page  */
+.admin-login-btn {
+    background-color: #009FBD;
+    border-radius: 5px;
+    padding: 6px 12px;
+    border: none;
+    color: white;
+
+}
+.admin-login-title {
+    color: #654E92;
+}
+.adminLoginPage-email-title {
+    color: #6D5D6E;
+}
+.adminLoginPage-password-title {
+    color: #6D5D6E;
+
+}
+.adminLogin-form {
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/*! Admin Profile Page  */
+.adminProfile-btn {
+    background-color: #BACDDB;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+}
+
+/*? Card Style  */
+.home-card-container {
+    display: flex; 
+    height: 100px;
+    gap: 50px;
+
+}
+.search-btn {
+background-color: #19A7CE;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 5px;
+
+}
+
+/*! Cart Details table CSS  */
+
+.cart-details-table-header, .card-details-table-body-content{
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 30px;
+    
+}
+.cart-details-table-header {
+    background-color: #009FBD;
+    color: white;
+}
+.cart-subtotal-price {
+    color: #6DA9E4;
+}
+.cart-subtotal-container {
+    display: flex;
+    gap: 40px;
+}
+.cart-subtotal {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.continue-shopping-btn {
+    margin-top: 45px;
+    background-color: #009FBD;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    color: white !important;
+}
+.checkout-btn {
+    margin-top: 45px;
+    background-color: #F6BA6F;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    color: white !important;
+}
+.cart-operation-btn {
+    background-color: #009FBD;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    color: white !important;
+    margin-left: 10px;
+}
+
+/*! Show All Users  */
+.showAllUsers-title {
+    color: #F2B6A0;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
