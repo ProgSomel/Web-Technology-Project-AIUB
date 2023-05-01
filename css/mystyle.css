@@ -64,12 +64,16 @@ background-color: #19A7CE;
 }
 
 /*! Cart Details table CSS  */
-
+.cart-container {
+    text-align: center;
+    
+}
 .cart-details-table-header, .card-details-table-body-content{
     text-align: center;
     align-items: center;
     border: 1px solid black;
     padding: 30px;
+    margin-left: 40px;
     
 }
 .cart-details-table-header {
@@ -117,4 +121,9 @@ background-color: #19A7CE;
     color: #F2B6A0;
     margin-bottom: 50px;
     margin-top: 50px;
+}
+
+/*! Seacrh User  */
+.searchUser-title {
+    color: #146C94;
 }

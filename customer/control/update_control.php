@@ -44,12 +44,8 @@ if ( isset( $_REQUEST["update"] ) ) {
         $_REQUEST["zipCode"],
         $_REQUEST["address"],
         $_REQUEST["password"], $File, $email, $conobj);
-        echo "Updated Successfully";
 
 }
-else {
-    echo "Error!";
 
-}
 
 ?>

@@ -5,7 +5,7 @@ include "../../admin/control/home_process.php";
 <head>
   <title>ABC Ecommerce-Cart Details</title>
   <!-- CSS Link  -->
-<link rel="stylesheet" href="../../../Web-Technology-Project-AIUB/CSS/style.css">
+<link rel="stylesheet" href="../../css/mystyle.css">
 </head>
 <body>
 

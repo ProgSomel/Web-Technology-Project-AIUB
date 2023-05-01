@@ -154,6 +154,13 @@ function insertProducts($tableName, $productTtile,$productDescription, $productK
         $result=$conn->query($sql);
         return $result;
     }
+    //! Searching Users 
+    function searchUser($tablename, $conn, $email) {
+    $sql="SELECT * FROM $tablename WHERE email = '$email'";
+    $result = $conn->query($sql);
+    return $result;
+}
+
 
 }
 

@@ -135,11 +135,12 @@ if ( isset( $_REQUEST['submit'] ) ) {
     }
 
     //? ----------Gender-----------
-    if ( empty( $gender ) ) {
+    if (empty($gender) ) {
         $genderMessage = "  Please enter your Gender !";
         $hasError = 1;
     } else {
         if ( isset( $gender ) ) {
+            $gender=$_REQUEST["gender"];
         $genderMessage = "   Your Gender : $gender ";
     }
     else {

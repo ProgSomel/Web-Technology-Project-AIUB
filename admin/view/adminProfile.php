@@ -260,6 +260,37 @@ include '../../layouts/header.php';
                     <td></td>
                     <td><button class="adminProfile-btn"><a href="../view/showAllUsers.php">Show all Users</a></button></td>
                     <td></td>
+                    <td>
+                    <td><button class="adminProfile-btn"><a href="adminProfile.php?searchUser">Search Users</a></button></td>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                    
                    
                     </tr>
@@ -282,6 +313,9 @@ include '../../layouts/header.php';
                 }
                 if(isset($_GET['list_user'])) {
                     include('insert_brands.php');
+                }
+                if(isset($_GET['searchUser'])) {
+                    include('searchUser.php');
                 }
                 ?>
             </div>

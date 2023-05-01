@@ -129,10 +129,11 @@ include '../../layouts/header.php';
 
 
 <td >
-<a href="../../home.php">HOME</a>
-<a href="login.php">ADMIN</a>
+<a href="../../index.php">HOME</a>
+<a href="../../admin/view/adminLogin.php">ADMIN</a>
 <a href="./View/Employee_login.php">EMPLOYEE</a>
-<a href="./View/Login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
+<a href="../view/login.php">CUSTOMER</a>     
+<a href="./View/Vlogin.php">SUPLIER</a>
 </td>
 <form method="post">
 <td><input type="text" name="search"size="30"><button type="button" name="btn">search</button></td>
@@ -151,7 +152,7 @@ include '../../layouts/header.php';
 <h1>User Registration</h1>
 </div>
       <div align="center">
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data" onsubmit="return validation()">
         <table>
             <tr></tr>
             <tr></tr>
@@ -164,7 +165,9 @@ include '../../layouts/header.php';
             <!------------ First Name ------- -->
             <th>First Name:</th>
             <td>
-                <input type="text" name="fname" id="" placeholder="Enter your First Name"  ><?php echo $fnameMessage ?><br>
+                <input type="text" id="fname" name="fname" id="" placeholder="Enter your First Name"><p id="fnameError"></p><?php echo $fnameMessage ?>
+                
+                <br>
             </td>
 
           </tr>
@@ -438,6 +441,7 @@ include "../../layouts/footer.php";
 ?>
 </footer>
 
-
+<!-- JS Script  -->
+<script src="../js/myScript.js"></script>
     </body>
 </html>
