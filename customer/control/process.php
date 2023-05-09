@@ -210,13 +210,13 @@ if ( isset( $_REQUEST['submit'] ) ) {
         }
     }
     //? --------- Set Profile Image --------
-    if ( empty( $_FILES['profileImage']['name'] ) ) {
+    if ( empty( $_FILES['File']['name'] ) ) {
         $profileImageMessage = "please ! Upload a Image";
         $hasError = 1;
 
     } else {
-        $profileImageMessage = $_FILES['profileImage']['name'];
-        move_uploaded_file( $_FILES["profileImage"]["tmp_name"], "../uploads/" . $_REQUEST['email'] . ".jpg" );
+        $profileImageMessage = $_FILES['File']['name'];
+        move_uploaded_file( $_FILES["File"]["tmp_name"], "../../customer/uploads/" . $_REQUEST['email'] . ".jpg" );
     }
     //!----- Data  Insert In SQL------
     if ( $hasError == 0 ) {
@@ -227,7 +227,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
         $result=$mydb->insertData("customer",$_REQUEST['fname'],$_REQUEST['lname'],
         $_REQUEST['userName'],$_REQUEST['dateOfBirth'],$_REQUEST['phoneNumber'],$_REQUEST['email'],
         $_REQUEST['gender'], $_REQUEST['city'], $_REQUEST['zipCode'], $_REQUEST['address'], $_REQUEST['password'],$_REQUEST['confirmPassword'], 
-        "../uploads/" . $_REQUEST['email'] . ".jpg", $conobj);
+        "../../customer/uploads/".$_REQUEST["email"].".jpg",$conobj);
         if($result===TRUE)//? === will check the value and it will also check the data type of both left and right 
         {
             echo "Successfully Registered. Please login";

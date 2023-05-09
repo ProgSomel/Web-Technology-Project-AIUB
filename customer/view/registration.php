@@ -375,7 +375,7 @@ include '../../layouts/header.php';
            <th>Set Profile Picture: </th>
 
      <td>
-  <input type="file" name="profileImage" id=""><?php echo $profileImageMessage ?>
+  <input type="file" name="File" id=""><?php echo $profileImageMessage ?>
      </td>
       </tr>
       <tr></tr>

@@ -4,13 +4,12 @@ session_start();
 $userId =1;
 $printCookie = '';
 $count=0;
-setcookie( "randomUserId", "$userId", time() + ( 86400 ) );
-if(isset($_COOKIE['randomUserId'])) {
+setcookie( "visited", "$userId", time() + ( 86400 ) );
+if(isset($_COOKIE['visited'])) {
      $printCookie='Visited';
 }
 else {
-  setcookie( "randomUserId", "$userId", time() + ( 86400 ) );
-      $printCookie=$count++;
+  $printCookie='Welcome';
 }
 
 //! function for getting products from Database
