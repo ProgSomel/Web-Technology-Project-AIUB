@@ -1,3 +1,6 @@
+<?php
+include("../control/profile_process.php"); 
+?>
 <html>
     <head>
         <title>Admin Profile</title>
@@ -92,7 +95,7 @@ include '../../layouts/header.php';
 
                     <td>
                         <a href="../../index.php">HOME</a>
-                        <a href="../view/adminProfile.php">ADMIN</a>
+                        <a href="../view/adminLogin.php">ADMIN</a>
                         <a href="./View/Employee_login.php">EMPLOYEE</a>
 <a href="../../customer/view/login.php">CUSTOMER</a>     <a href="./View/Vlogin.php">SUPLIER</a>
 
@@ -188,7 +191,12 @@ include '../../layouts/header.php';
                     
                     <td >
                         <div >
-                            <a href="">Welcome guest</a>
+                            Hello
+                        <?php
+
+            echo  $_SESSION["email"]; ?>
+
+</h4> 
                         </div>
                     </td>
                     <td>
@@ -209,7 +217,7 @@ include '../../layouts/header.php';
                 <table>
                     <tr>
                         <td>
-                            <img src="../../assets/apple.jfif" alt="" width="50px" height="50px">
+                            <img src="<?php echo $File ?>" alt="" width="50px" height="50px">
                         </td>
                        <td></td>
                        <td></td>
@@ -243,7 +251,7 @@ include '../../layouts/header.php';
                        
                     <td><button class="adminProfile-btn"><a href="insert_products.php">Insert Products</a></button></td>
                     <td></td>
-                    <td><button class="adminProfile-btn"><a href="">View Products</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="../view/viewProducts.php">View Products</a></button></td>
                     <td></td>
                     <td><button class="adminProfile-btn"><a href="adminProfile.php?insert_category">Insert Categories</a></button></td>
                     <td></td>
@@ -296,8 +304,11 @@ include '../../layouts/header.php';
                     </tr>
                     <tr>
                         <td>
-                            <p>Admin name</p>
+                            <p><?php echo "$fname".""."$lname" ?></p>
                         </td>
+                    </tr>
+                    <tr>
+                    <td><button class="adminProfile-btn"><a href="adminProfile.php?see_details">See Profile</a></button></td>
                     </tr>
                 </table>
             </div>
@@ -316,6 +327,9 @@ include '../../layouts/header.php';
                 }
                 if(isset($_GET['searchUser'])) {
                     include('searchUser.php');
+                }
+                if(isset($_GET['see_details'])) {
+                    include('seeAdminDetails.php');
                 }
                 ?>
             </div>

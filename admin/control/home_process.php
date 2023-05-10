@@ -27,13 +27,13 @@ $conobj = $mydb->openCon(); //?Accessing openCon() function using $mydb object
           
     if($allProductsData->num_rows>0) {
       while($row=$allProductsData->fetch_assoc()) {
-          $productId = $row["product_id"];
-          $productTitle = $row["product_title"];
-          $productDescription = $row["product_description"];
-          $productImage1 = $row["product_image1"];
-          $producPrice = $row["product_price"];
-          $categoryId = $row["category_id"];
-          $brandId = $row["brand_id"];
+        $productId = $row["product_id"];
+        $productTitle = $row["product_title"];
+        $productDescription = $row["product_description"];
+        $productImage1 = $row["product_image1"];
+        $producPrice = $row["product_price"];
+        $categoryId = $row["category_id"];
+        $brandId = $row["brand_id"];
            if($count!=3) {
             echo "<td>
             <img src='../uploads/products_images/$productImage1' alt='' width='200px' height='200px'>
@@ -51,6 +51,7 @@ $conobj = $mydb->openCon(); //?Accessing openCon() function using $mydb object
             $count = 0;
            }
             
+          
            
   
       }

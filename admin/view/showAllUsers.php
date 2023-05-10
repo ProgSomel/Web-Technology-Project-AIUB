@@ -239,6 +239,7 @@ echo "<div class='column'";
         echo "<img src='".$row["File"]."' alt=".$row["fname"]." width='100px' height='100px' />";
        echo " <p class='title'>".$row["fname"]." ".$row["lname"]."</h4> ";
         echo "<p>".$row["email"]."</p>";
+        echo "<p>".$row["phoneNumber"]."</p>";
         echo "<p>".$row["gender"]."</p>";
         echo "<p>".$row["dateOfBirth"]."</p>";
         echo "<p>".$row["city"]."</p>";
@@ -249,6 +250,7 @@ echo "<div class='column'";
 
 
     }
+  
   
 }
 else

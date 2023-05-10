@@ -1,5 +1,5 @@
 <?php
- include '../model/mydb.php';
+ include_once '../model/mydb.php';
  if(isset($_POST['insert_brand'])) {
     $brand_title = $_POST['brand_title'];
     $mydb= new MyDB();//? Creating A Object $mydb for Class MyDB

@@ -122,7 +122,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
         else {
         $mydb = new MyDB();
         $conobj = $mydb->openCon();
-        $result = $mydb->getUserEmail("customer", $_REQUEST["email"],$conobj);
+        $result = $mydb->getUserEmail("admin", $_REQUEST["email"],$conobj);
         if( $result->num_rows>0) {
             $emailMessage = "Email is Already Exits! Please login";
             $hasError = 1;
@@ -209,13 +209,13 @@ if ( isset( $_REQUEST['submit'] ) ) {
         }
     }
     //? --------- Set Profile Image --------
-    if ( empty( $_FILES['profileImage']['name'] ) ) {
+    if ( empty( $_FILES['File']['name'] ) ) {
         $profileImageMessage = "please ! Upload a Image";
         $hasError = 1;
 
     } else {
-        $profileImageMessage = $_FILES['profileImage']['name'];
-        move_uploaded_file( $_FILES["profileImage"]["tmp_name"], "../uploads/" . $_REQUEST['email'] . ".jpg" );
+        $profileImageMessage = $_FILES['File']['name'];
+        move_uploaded_file( $_FILES["File"]["tmp_name"], "../uploads/" . $_REQUEST['email'] . ".jpg" );
     }
     //!----- Data  Insert In SQL------
     if ( $hasError == 0 ) {
@@ -223,7 +223,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
         $mydb= new MyDB();//? Creating A Object $mydb for Class MyDB
         $conobj= $mydb->openCon();//?Accessing openCon() function using $mydb object
         //! Accessing insertData() function using $mydb object
-        $result=$mydb->insertData("customer",$_REQUEST['fname'],$_REQUEST['lname'],
+        $result=$mydb->insertData("admin",$_REQUEST['fname'],$_REQUEST['lname'],
         $_REQUEST['userName'],$_REQUEST['dateOfBirth'],$_REQUEST['phoneNumber'],$_REQUEST['email'],
         $_REQUEST['gender'], $_REQUEST['city'], $_REQUEST['zipCode'], $_REQUEST['address'], $_REQUEST['password'],$_REQUEST['confirmPassword'], 
         "../uploads/" . $_REQUEST['email'] . ".jpg", $conobj);

@@ -1,5 +1,5 @@
 <?php
-include '../model/mydb.php';
+include_once '../model/mydb.php';
 session_start();
 
 //! Inserting Products to Database

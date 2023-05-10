@@ -305,6 +305,11 @@ include '../../layouts/header.php';
 
             </tr>
             <tr>
+            <td>
+                    Don't Have an Account ? <a href="registration.php">Register</a>
+                </td>
+            </tr>
+            <tr>
                 <td>
                 <?php
 echo $errorMessage;
