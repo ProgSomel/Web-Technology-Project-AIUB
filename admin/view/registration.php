@@ -106,25 +106,8 @@ include '../../layouts/header.php';
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+
+
 
 
 
@@ -135,10 +118,91 @@ include '../../layouts/header.php';
 <a href="../view/login.php">CUSTOMER</a>     
 <a href="./View/Vlogin.php">SUPLIER</a>
 </td>
-<form method="post">
-<td><input type="text" name="search"size="30"><button type="button" name="btn">search</button></td>
 <td></td>
-</form>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </table>
 </header>
@@ -148,6 +212,9 @@ include '../../layouts/header.php';
      
 
       <main>
+        
+       
+       
       <div align = "center" >
 <h1>User Registration</h1>
 </div>
@@ -202,7 +269,9 @@ include '../../layouts/header.php';
           <th>User Name: </th>
 
             <td>
-                <input type="text" name="userName" id="" placeholder="Enter your User Name"><?php echo $userNameMessage ?><br>
+                <input type="text" name="userName" id="UserName" placeholder="Enter your User Name">
+                <p id="usernameerror"></p>
+                <?php echo $userNameMessage ?><br>
             </td>
           </tr>
           <tr></tr>
@@ -218,7 +287,9 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="date" name="dateOfBirth" id=""><?php echo $dateOfBirthMessage ?><br>
+                <input type="date" name="dateOfBirth" id="dateOfBirth">
+                <p id="dateOfBirthError"></p>
+                <?php echo $dateOfBirthMessage ?><br>
             </td>
           </tr>
           <tr></tr>
@@ -234,8 +305,9 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="text" name="phoneNumberCountryCode" id="" value="+88" size="1">
-                <input type="text" name="phoneNumber" id="" placeholder="Enter your Number" ><?php echo $phoneNumberMessage ?>
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter your Number" >
+                <p id="phoneNumberError"></p>
+                <?php echo $phoneNumberMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -251,7 +323,8 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="email" name="email" id="" placeholder="abc@example.com">
+                <input type="text" name="email" id="email" placeholder="abc@example.com">
+                <p id="emailError"></p>
                 <?php echo $emailMessage ?>
             </td>
           </tr>
@@ -269,9 +342,11 @@ include '../../layouts/header.php';
 
 
             <td>
-            <input type="radio" name="gender" id="" value = "Male">Male
-            <input type="radio" name="gender" id="" value = "Female">Female
-            <input type="radio" name="gender" id="" value = "NotInterested">Not Interested. <?php echo $genderMessage ?>
+            <input type="radio" name="gender" id="gender" value = "Male">Male
+            <input type="radio" name="gender" id="gender" value = "Female">Female
+            <input type="radio" name="gender" id="gender" value = "NotInterested">Not Interested.
+            <p id="genderError"></p> 
+            <?php echo $genderMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -287,8 +362,7 @@ include '../../layouts/header.php';
 
 
             <td>
-            <select  name="city">
-    <option value="Select City">Select City</option>
+            <select id="city" name="city">
     <option value="Dhaka">Dhaka</option>
     <option value="Gazipur">Gazipur</option>
     <option value="Mymensingh">Mymensingh</option>
@@ -297,6 +371,7 @@ include '../../layouts/header.php';
     <option value="Comilla">Comilla</option>
     <option value="Sylhet">Sylhet</option>
     <option value="Rangpur">Rangpur</option>
+    <p id="cityError"></p>
 </select> <?php echo $cityMessage ?>
             </td>
           </tr>
@@ -314,7 +389,9 @@ include '../../layouts/header.php';
 
 
             <td>
-<input type="text" name="zipCode" id="" placeholder="Enter Zip Code"> <?php echo $zipCodeMessage ?>
+<input type="text" name="zipCode" id="zipCode" placeholder="Enter Zip Code"> 
+<p id="zipCodeError"></p>
+<?php echo $zipCodeMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -330,7 +407,9 @@ include '../../layouts/header.php';
 
 
             <td>
-                <textarea name="address" id="" cols="25" rows="5"></textarea> <?php echo $addressMessage ?>
+                <textarea name="address" id="address" cols="25" rows="5"></textarea>
+                <p id="addressError"></p>
+                 <?php echo $addressMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -346,7 +425,9 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="password" name="password" id="" placeholder="Enter Password"><?php echo $passwordMessage ?>
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+                <p id="passwordError"></p>
+                <?php echo $passwordMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -362,7 +443,9 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="password" name="confirmPassword" id="" placeholder="Confirm your Password"><?php echo $confirmPasswordMessage ?>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your Password">
+                <p id="confirmPasswordError"></p>
+                <?php echo $confirmPasswordMessage ?>
             </td>
           </tr>
           <tr></tr>
@@ -380,7 +463,9 @@ include '../../layouts/header.php';
            <th>Set Profile Picture: </th>
 
      <td>
-  <input type="file" name="File" id=""><?php echo $profileImageMessage ?>
+  <input type="file" name="File" id="file">
+  <p id="fileError"></p>
+  <?php echo $profileImageMessage ?>
      </td>
       </tr>
       <tr></tr>

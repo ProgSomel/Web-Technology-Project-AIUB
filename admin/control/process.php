@@ -22,7 +22,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
     $email = $_REQUEST['email'];
     $phoneNumber = $_REQUEST['phoneNumber'];
     $dateOfBirth = $_REQUEST['dateOfBirth'];
-    $_POST['gender'] = isset($_POST['gender']) ? $_POST['gender'] : 0;
+    $gender = $_REQUEST['gender'];
     $city = $_REQUEST['city'];
     $zipCode = $_REQUEST['zipCode'];
     $address = $_REQUEST['address'];
@@ -212,7 +212,7 @@ if ( isset( $_REQUEST['submit'] ) ) {
     }
     //? --------- Set Profile Image --------
     if ( empty( $_FILES['File']['name'] ) ) {
-        $profileImageMessage = "please ! Upload a Image";
+        $profileImageMessage = "Please Upload an Image!";
         $hasError = 1;
 
     } else {
