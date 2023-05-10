@@ -1,3 +1,35 @@
+//! Javascript Form Validation
+function validation() {
+  if(checkfname()==false || checklname()==false) {
+    return false;
+  }
+  return true;
+}
+
+function checkfname(){
+  var fname= document.getElementById("fname").value;
+  if(fname==""){
+    document.getElementById("fnameerror").innerHTML=
+    "!First Name Must be Mentioned";
+      return false;
+  }
+  else{
+      return true;
+  }
+}
+function checklname(){
+  var lname= document.getElementById("lname").value;
+  if(lname==""){
+    document.getElementById("lnameerror").innerHTML=
+    "!Last Name Must be Mentioned";
+      return false;
+  }
+  else{
+      return true;
+  }
+}
+
+//! Searching User Using AJAX
 function fetchUsers(){
     var email = document.getElementById("email").value;
     
@@ -15,3 +47,5 @@ function fetchUsers(){
     xttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xttp.send("email="+email);
 }
+
+

@@ -22,10 +22,12 @@ if ( isset( $_REQUEST['submit'] ) ) {
     $email = $_REQUEST['email'];
     $phoneNumber = $_REQUEST['phoneNumber'];
     $dateOfBirth = $_REQUEST['dateOfBirth'];
-    $gender = $_REQUEST['gender'];
+    $_POST['gender'] = isset($_POST['gender']) ? $_POST['gender'] : 0;
     $city = $_REQUEST['city'];
     $zipCode = $_REQUEST['zipCode'];
     $address = $_REQUEST['address'];
+
+
     $password = $_REQUEST['password'];
     $confirmPassword = $_REQUEST['confirmPassword'];
     $hasError = 0; //?For checking isThereAny ValidationError

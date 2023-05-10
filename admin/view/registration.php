@@ -151,8 +151,9 @@ include '../../layouts/header.php';
       <div align = "center" >
 <h1>User Registration</h1>
 </div>
+<script src="../js/myscript.js"></script>
       <div align="center">
-    <form action="" method="post" enctype="multipart/form-data" onsubmit="return validation()">
+    <form action="" method="POST" enctype="multipart/form-data" onsubmit="return validation()">
         <table>
             <tr></tr>
             <tr></tr>
@@ -165,7 +166,9 @@ include '../../layouts/header.php';
             <!------------ First Name ------- -->
             <th>First Name:</th>
             <td>
-                <input type="text" id="fname" name="fname" id="" placeholder="Enter your First Name"><p id="fnameError"></p><?php echo $fnameMessage ?>
+                <input type="text" id="fname" name="fname" placeholder="Enter your First Name"/>
+                <p id="fnameerror"></p>
+                <?php echo $fnameMessage ?>
                 
                 <br>
             </td>
@@ -183,7 +186,9 @@ include '../../layouts/header.php';
 
 
             <td>
-                <input type="text" name="lname" id="" placeholder="Enter your Last Name" ><?php echo $lnameMessage ?><br>
+                <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" >
+                <p id="lnameerror"></p>
+                <?php echo $lnameMessage ?><br>
             </td>
           </tr>
           <tr></tr>
@@ -403,7 +408,7 @@ include '../../layouts/header.php';
             <td>
 
               <input type="reset" value="Reset">
-              <input type="submit" name="submit" value="Submit"/>
+              <input type="submit" name="submit" value="Submit">
 
             </td>
 
@@ -441,7 +446,6 @@ include "../../layouts/footer.php";
 ?>
 </footer>
 
-<!-- JS Script  -->
-<script src="../js/myScript.js"></script>
+
     </body>
 </html>

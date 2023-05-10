@@ -31,14 +31,14 @@ class MyDB { //? Creating a class Called MyDB
     }
 
 //! Getting User's All Informations
-    function getUserInfo( $tableName, $email, $conn ) {
+    function getUserInfo($tableName, $email, $conn ) {
         $sql = "SELECT * FROM $tableName WHERE email = '$email'";
         $result = $conn->query( $sql );
         return $result;
 
     }
 //! Updating User
-    function updateUser( $tableName, $fname, $lname, $userName, $dateOfBirth, $phoneNumber, $gender, $city, $zipCode, $address, $password, $File, $email, $conn ) {
+    function updateUser($tableName, $fname, $lname, $userName, $dateOfBirth, $phoneNumber, $gender, $city, $zipCode, $address, $password, $File, $email, $conn ) {
         $sql = "UPDATE $tableName SET fname = '$fname', lname = '$lname', userName = '$userName', dateOfBirth = '$dateOfBirth', phoneNumber = '$phoneNumber', gender = '$gender', city = '$city', zipCode = '$zipCode', address = '$address', password = '$password', File = '$File'  WHERE email = '$email'";
         $result = $conn->query( $sql );
         return $result;
