@@ -337,6 +337,9 @@ include '../../layouts/header.php';
                 if(isset($_GET['edit_viewProducts'])) {
                     include('editProducts.php');
                 }
+                if(isset($_GET['delete_product'])) {
+                    include('deleteProduct.php');
+                }
                 ?>
             </div>
         </main>

@@ -88,7 +88,7 @@ function getCategories($tableName, $category_title, $conn) {
 }
 //! Getting Categories with Condition on category_id From Database
 function getCategoriesUsingId($tableName, $categoryId, $conn) {
-    $sql = "SELECT * FROM $tableName WHERE category_id = '$categoryId'";
+    $sql = "SELECT * FROM $tableName WHERE category_id ='$categoryId'";
     $result = $conn->query($sql);
     return $result;
 
@@ -144,7 +144,7 @@ function getAllBrand($tableName, $conn) {
 //! Inserting Products to Database
 function insertProducts($tableName, $productTtile,$productDescription, $productKeyword, $productCategory, $productBrand, $productImage1, $productImage2, $productPrice, $date, $status,$conn){
     //? SQL Query for Inserting Data into Database
-    $sql="INSERT INTO $tableName (product_title,	product_description, product_keyword, category_id, brand_id, product_image1, product_image2, product_price, date, status) VALUES ('$productTtile','$productDescription', '$productKeyword', '$productCategory', '$productBrand', '$productImage1', '$productImage2', '$productPrice', '$date', '$status')";
+    $sql="INSERT INTO $tableName (product_title,product_description, product_keyword, category_id, brand_id, product_image1, product_image2, product_price, date, status) VALUES ('$productTtile','$productDescription', '$productKeyword', '$productCategory', '$productBrand', '$productImage1', '$productImage2', '$productPrice', '$date', '$status')";
     //! Executing Query
     $result=$conn->query($sql);
     return $result;
@@ -169,11 +169,17 @@ function insertProducts($tableName, $productTtile,$productDescription, $productK
 
     //! Upadting Products Table
     function updateProducts( $tableName, $productTitle, $productDescription, $productKeyword, $productCategory, $productBrand, $productImage1, $productImage2, $productPrice, $productId, $conn ) {
-        $sql = "UPDATE $tableName SET product_title = '$productTitle', product_description = '$productDescription', product_keyword = '$productKeyword', category_id = '$productCategory', brand_id = '$productBrand',product_image1 = '$productImage1', product_image2 = '$productImage2',	product_price = '$productPrice', WHERE product_id = '$productId'";
+        $sql = "UPDATE $tableName SET product_title = '$productTitle', product_description = '$productDescription', product_keyword = '$productKeyword', category_id = '$productCategory', brand_id = '$productBrand',product_image1 = '$productImage1', product_image2 = '$productImage2',	product_price = '$productPrice' WHERE product_id = '$productId'";
         $result = $conn->query( $sql );
         return $result;
     }
 
+    //! Delete Product
+    function deleteProduct($tablename, $productId, $conn){
+        $sql= "DELETE FROM $tablename WHERE product_id = '$productId' ";
+        $result=$conn->query($sql);
+        return $result;
+        }
 
 
     //!Getting clicked categroy  Products From The Database

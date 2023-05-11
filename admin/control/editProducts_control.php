@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_GET['edit_viewProducts'])) {
    $productId = $_GET['edit_viewProducts'];
    
@@ -45,19 +46,32 @@ if(isset($_GET['edit_viewProducts'])) {
            $productImage2 = $_FILES['product-image2']['name'];
            $tempImage1 = $_FILES['product-image1']['tmp_name'];
            $tempImage2 = $_FILES['product-image2']['tmp_name'];
-           
-           move_uploaded_file($tempImage1, "../uploads/product-image/products_images/$productImage1");
-           move_uploaded_file($tempImage2, "../uploads/product-image/products_images/$productImage2");
 
-           $updateProduct = $mydb->updateProducts("products", $productTitle, $producDescription, $productKeyword, $productCategory, $productBrand, $productImage1, $productImage2, $productPrice, $productId, $conobj);
-
-           if($updateProduct) {
-            echo "Updated Successfully";
-            header('Location:../../../view/viewProducts.php');
+           if($productTitle=="" || $productDescription=="" || $productKeyword=="" || $productCategory=="" || $productBrand=="" || $productImage1=="" || $productImage2=="" || $productPrice=="") {
+            echo "!please fill all the fields";
            }
            else {
-              echo "!Updated Failed";
+            move_uploaded_file($tempImage1, "../uploads/products_images/$productImage1");
+            move_uploaded_file($tempImage2, "../uploads/products_images/$productImage2");
+
+            //? Query to Update Products
+            $mydb = new MyDB();
+            $conobj = $mydb->openCon();
+            $updatedProduct = $mydb->updateProducts("products", $productTitle, $producDescription, $productKeyword, $productCategory, $productBrand, $productImage1, $productImage2, $productPrice, $productId, $conobj);
+
+            if($updatedProduct) {
+               echo "Updated Successfully";
+              }
+              else {
+                 echo "!Updated Failed";
+              }
            }
+           
+           
+           
+           
+
+          
 
 
         }

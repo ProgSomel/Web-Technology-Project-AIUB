@@ -46,7 +46,7 @@ include("../control/viewProducts_control.php");
                 <td>0</td>
                 <td><?php echo $productStatus?></td>
                 <td><a href='adminProfile.php?edit_viewProducts=<?php echo $productId?>'><i class='fa-solid fa-pen-to-square'></i></a></td>
-                <td><a href=''><i class='fa-solid fa-trash'></i></a></td>
+                <td><a href='adminProfile.php?delete_product=<?php echo $productId?>'><i class='fa-solid fa-trash'></i></a></td>
             </tr>
 
             <?php
