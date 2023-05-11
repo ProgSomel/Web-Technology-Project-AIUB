@@ -251,7 +251,7 @@ include '../../layouts/header.php';
                        
                     <td><button class="adminProfile-btn"><a href="insert_products.php">Insert Products</a></button></td>
                     <td></td>
-                    <td><button class="adminProfile-btn"><a href="../view/viewProducts.php">View Products</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="adminProfile.php?view_products">View Products</a></button></td>
                     <td></td>
                     <td><button class="adminProfile-btn"><a href="adminProfile.php?insert_category">Insert Categories</a></button></td>
                     <td></td>
@@ -330,6 +330,12 @@ include '../../layouts/header.php';
                 }
                 if(isset($_GET['see_details'])) {
                     include('seeAdminDetails.php');
+                }
+                if(isset($_GET['view_products'])) {
+                    include('viewProducts.php');
+                }
+                if(isset($_GET['edit_viewProducts'])) {
+                    include('editProducts.php');
                 }
                 ?>
             </div>

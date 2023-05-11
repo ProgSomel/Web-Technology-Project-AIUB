@@ -86,6 +86,20 @@ function getCategories($tableName, $category_title, $conn) {
     return $result;
 
 }
+//! Getting Categories with Condition on category_id From Database
+function getCategoriesUsingId($tableName, $categoryId, $conn) {
+    $sql = "SELECT * FROM $tableName WHERE category_id = '$categoryId'";
+    $result = $conn->query($sql);
+    return $result;
+
+}
+//! Getting Categories From Database
+function getCategoriesAll($tableName, $conn) {
+    $sql = "SELECT * FROM $tableName";
+    $result = $conn->query($sql);
+    return $result;
+
+}
 
 //! Getting All Category for Displaying on Home Page From Database
 function getAllCategory($tableName, $conn) {
@@ -107,6 +121,13 @@ function insertBrand($tableName,$brand_title ,$conn){
 //! Getting brand with condition on brand_title From Database
 function getBrands($tableName, $brand_title, $conn) {
     $sql = "SELECT * FROM $tableName WHERE brand_title = '$brand_title'";
+    $result = $conn->query($sql);
+    return $result;
+
+}
+//! Getting brand with condition on brand_id From Database
+function getBrandsUsingId($tableName, $brandId, $conn) {
+    $sql = "SELECT * FROM $tableName WHERE brand_id = '$brandId'";
     $result = $conn->query($sql);
     return $result;
 
@@ -135,6 +156,26 @@ function insertProducts($tableName, $productTtile,$productDescription, $productK
         $result = $conn->query($sql);
         return $result ;
     }
+    function getAllProductsAdmin($tableName, $conn) {
+        $sql = "SELECT * FROM $tableName";
+        $result = $conn->query($sql);
+        return $result ;
+    }
+    function getAllProductsUsingProductId($tableName,$productId, $conn) {
+        $sql = "SELECT * FROM $tableName where product_id = $productId";
+        $result = $conn->query($sql);
+        return $result ;
+    }
+
+    //! Upadting Products Table
+    function updateProducts( $tableName, $productTitle, $productDescription, $productKeyword, $productCategory, $productBrand, $productImage1, $productImage2, $productPrice, $productId, $conn ) {
+        $sql = "UPDATE $tableName SET product_title = '$productTitle', product_description = '$productDescription', product_keyword = '$productKeyword', category_id = '$productCategory', brand_id = '$productBrand',product_image1 = '$productImage1', product_image2 = '$productImage2',	product_price = '$productPrice', WHERE product_id = '$productId'";
+        $result = $conn->query( $sql );
+        return $result;
+    }
+
+
+
     //!Getting clicked categroy  Products From The Database
     function getClickedCategoryProducts($tableName, $category_id, $conn) {
         $sql = "SELECT * FROM $tableName where category_id =$category_id";
@@ -197,6 +238,8 @@ function insertProducts($tableName, $productTtile,$productDescription, $productK
     $result = $conn->query($sql);
     return $result;
 }
+
+
 
 
 

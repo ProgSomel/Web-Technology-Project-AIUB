@@ -38,6 +38,11 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+/*! Admin Registration Form  */
+.admin-registration-form {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 /*! Admin Profile Page  */
 .adminProfile-btn {
     background-color: #BACDDB;
@@ -126,4 +131,74 @@ background-color: #19A7CE;
 /*! Seacrh User  */
 .searchUser-title {
     color: #146C94;
+}
+
+/*! View Products  */
+.view-products-title {
+    text-align: center;
+    color: #F6BA6F;
+}
+.view-products-table {
+    border-collapse: collapse;   /*?Border Will be collapsed with each others */
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+  margin-right: auto;
+}
+.view-products-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+.view-products-table th,
+.view-products-table td {
+    padding: 12px 15px;
+}
+.view-products-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+
+}
+
+/*! Edit Products  */
+.edit-product-label {
+    margin-bottom: 100px;
+}
+.edit-products-title {
+    text-align: center;
+    color: #F6BA6F;
+}
+.form-data-container {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.edit-product-input {
+    width: 500px;
+    background-color: lightblue;
+}
+.edit-product-input-description {
+    width: 500px;
+    background-color: lightblue;
+    
+        height: 100px;
+}
+.edit-product-image1-container {
+    display: flex;
+
+}
+.edit-product-btn-container {
+    margin-top: 20px;
+    margin-left: 310px;
+}
+.edit-product-btn {
+    background-color: #19A7CE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+
 }

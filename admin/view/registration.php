@@ -3,7 +3,11 @@ include '../control/process.php';
 ?>
 
 <html>
-    <head></head>
+    <head>
+    <title>Admin Registration Page</title>
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="../../css/mystyle.css">
+    </head>
     <body>
     <header>
 <table align="right">
@@ -220,7 +224,7 @@ include '../../layouts/header.php';
 </div>
 <script src="../js/myscript.js"></script>
       <div align="center">
-    <form action="" method="POST" enctype="multipart/form-data" onsubmit="return validation()">
+    <form class="admin-registration-form" action="" method="POST" enctype="multipart/form-data" onsubmit="return validation()">
         <table>
             <tr></tr>
             <tr></tr>
