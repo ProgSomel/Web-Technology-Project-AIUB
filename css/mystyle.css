@@ -15,6 +15,9 @@
 }
 
 /*! Admin Login Page  */
+.admin-loginPage-header {
+    background-color: red;
+}
 .admin-login-btn {
     background-color: #009FBD;
     border-radius: 5px;
@@ -44,6 +47,9 @@
 }
 
 /*! Admin Profile Page  */
+.adminProfile-header {
+    background-color: red;
+}
 .adminProfile-btn {
     background-color: #BACDDB;
     border-radius: 5px;

@@ -4,6 +4,7 @@ include("../control/profile_process.php");
 <html>
     <head>
         <title>Admin Profile</title>
+        <!-- CSS Link  -->
         <link rel="stylesheet" href="../../CSS/mystyle.css">
     </head>
     <body>
@@ -249,7 +250,7 @@ include '../../layouts/header.php';
                        <td></td>
                        <td></td>
                        
-                    <td><button class="adminProfile-btn"><a href="insert_products.php">Insert Products</a></button></td>
+                    <td><button class="adminProfile-btn"><a href="adminProfile.php?insert_products">Insert Products</a></button></td>
                     <td></td>
                     <td><button class="adminProfile-btn"><a href="adminProfile.php?view_products">View Products</a></button></td>
                     <td></td>
@@ -318,6 +319,9 @@ include '../../layouts/header.php';
                 <?php
                 if(isset($_GET['insert_category'])) {
                     include('insert_categories.php');
+                }
+                if(isset($_GET['insert_products'])) {
+                    include('insert_products.php');
                 }
                 if(isset($_GET['insert_brand'])) {
                     include('insert_brands.php');

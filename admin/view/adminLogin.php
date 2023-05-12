@@ -9,8 +9,8 @@ include '../control/admin_login_control.php'
     <link rel="stylesheet" href="../../CSS/mystyle.css">
 </head>
 <body >
-<header class="admin-loginPage-header">
-<table align="right">
+<header>
+<table align="right" class="admin-loginPage-header">
 <tr>
 <td><?php
 include '../../layouts/header.php';

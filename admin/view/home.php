@@ -45,7 +45,7 @@ include '../../layouts/header.php';
 
 <td >
 <a href="../../index.php" class="nav-link">HOME</a>
-<a href="../view/adminLogin.php">ADMIN</a>
+<a href="../../admin/view/adminLogin.php">ADMIN</a>
 <a href="">EMPLOYEE</a>
 <a href="">SUPPLIER</a>
 <a href="../../customer/view/login.php">CUSTOMER</a>
@@ -183,6 +183,24 @@ echo $printCookie;
         </div>
 </main>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
