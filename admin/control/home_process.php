@@ -4,6 +4,7 @@ session_start();
 $userId =1;
 $printCookie = '';
 $count=0;
+$totalPrice = 0;
 setcookie( "visited", "$userId", time() + ( 86400 ) );
 if(isset($_COOKIE['visited'])) {
      $printCookie='Visited';
@@ -337,7 +338,7 @@ function cartItemNumber() {
   //! Function for Total Cart Price 
   function TotalCartPrice() {
     global $userId;
-    $totalPrice = 0;
+    global $totalPrice;
     $mydb = new MyDB();
     $conobj = $mydb->openCon();
     $result = $mydb->getCartValueForItems("cart", $userId, $conobj);
@@ -352,7 +353,42 @@ function cartItemNumber() {
       }
     }
     echo $totalPrice;
+    
   }
+
+  //! Function for Cart Quantity 
+  
+    global $userId;
+    
+    if(isset($_REQUEST['update-cart-btn'])) {
+      $quantity = $_REQUEST['qty'];
+    $mydb = new MyDB();
+    $conobj = $mydb->openCon();
+    $updatedCartQuantity = $mydb->updateCart("cart", $quantity,$userId, $conobj);
+    }
+
+    //! Function for remove Cart Item 
+    function removeCartItem() {
+       if(isset($_REQUEST['remove-cart-btn'])) {
+        foreach($_REQUEST['removeItem'] as $removeId) {
+          echo $removeId;
+          $mydb = new MyDB();
+          $conobj = $mydb->openCon();
+          $removedItem = $mydb->removeCartItem("cart", $removeId, $conobj);
+          if($removedItem) {
+            echo "<script>window.open('cart.php','_self')</script>";
+          }
+
+        }
+       }
+    }
+    echo $remove_item = removeCartItem();
+    
+    
+    
+    
+   
+  
 
 
   

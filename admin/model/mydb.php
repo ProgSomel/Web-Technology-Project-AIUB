@@ -245,6 +245,22 @@ function insertProducts($tableName, $productTtile,$productDescription, $productK
     return $result;
 }
 
+//! Updating Cart Table
+function updateCart($tableName, $quantity, $userID,  $conn ) {
+    $sql = "UPDATE $tableName SET quantity = '$quantity' WHERE userId='$userID'";
+    $result = $conn->query( $sql );
+    return $result;
+}
+
+//! Removing Cart Item 
+function removeCartItem($tablename, $productId, $conn){
+    $sql= "DELETE FROM $tablename WHERE product_id = '$productId' ";
+    $result=$conn->query($sql);
+    return $result;
+    }
+
+
+
 
 
 

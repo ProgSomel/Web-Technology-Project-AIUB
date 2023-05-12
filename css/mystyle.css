@@ -16,7 +16,7 @@
 
 /*! Admin Login Page  */
 .admin-loginPage-header {
-    background-color: red;
+    background-color: #ECCDB4;
 }
 .admin-login-btn {
     background-color: #009FBD;
@@ -48,7 +48,7 @@
 
 /*! Admin Profile Page  */
 .adminProfile-header {
-    background-color: red;
+    background-color: #ECCDB4;
 }
 .adminProfile-btn {
     background-color: #BACDDB;
